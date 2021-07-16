@@ -1,0 +1,52 @@
+
+
+Generates a function to search for a filed by name and
+go to the cursor position and print a string.
+note: the gotoPos includes the format to print a string
+with the maximal size of the field
+
+
+
+
+_______________________________________________________________ From
+
+
++---------------------------------+
+| time now [NOW   ] counter [CNT] |
++---------------------------------+
+
+_______________________________________________________________ generates
+
+
+
+const char* screen[] = {
+"",
+"+---------------------------------+",
+"| time now [      ] counter [   ] |",
+"+---------------------------------+",
+"",
+ 0 };
+
+
+#define CLEAR_MASK "\x1B[2J\x1B[1;1H"
+#define INIT_MASK() fputs(CLEAR_MASK, stdout); for(int i = 0; screen[i] != 0; i++) puts(screen[i]);
+
+struct FieldPos {
+   const char* fieldname;
+   const char* gotoPos;
+};
+
+FieldPos fieldPos[] = {
+    { "NOW", "\x1B[3;13H%6s" },
+    { "CNT", "\x1B[3;30H%3s" },
+    {0, 0 }
+};
+
+void printMaskField(char* field, char* val) {
+    for(int i= 0; fieldPos[i].fieldname != 0; i++) {
+        if(strcmp(fieldPos[i].fieldname, field) != 0)  continue;
+        printf(fieldPos[i].gotoPos, val);
+        return;
+    }
+}
+

@@ -1,0 +1,15 @@
+﻿
+
+like generator01-simple.cpp
+but instead of writing to stdout it generates two files:
+
+mask-screen.h		with the definition to print the mask on the screen
+mask.h			all macros (#define)
+
+
+This is useful if your program consist of several source files which all
+shall  include maks.h
+else the other code would produce multiple definitions of 
+const char* screen[] = { ..... }
+
+

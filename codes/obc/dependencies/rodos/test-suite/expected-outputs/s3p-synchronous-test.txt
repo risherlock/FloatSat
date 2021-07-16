@@ -1,0 +1,9 @@
+______________________ raw content of transmission channel, only to see the coding
+ Raw Content --:-00--01--02--03--04--FC--FD--FE--7E--FF--00--FE--02-hello world how are you doing-FE--03--FE--02-I am doing well-FE--03--FE--02-and how are you?-FE--03--00--01--02--03--04--FC--FD--FE--7E--FF--00--FE--02--00--01--02--03--04--05--06--07--08--09--FC--FD--FE--7E--FF--00--01--02--03--04--05--FE--03-:--
+______________________ Real Application interface. We expect 4 Messages
+ msg 0 (29 bytes): --:hello world how are you doing:--
+ msg 1 (15 bytes): --:I am doing well:--
+ msg 2 (16 bytes): --:and how are you?:--
+ msg 3 (20 bytes): --:-00--01--02--03--04--05--06--07--08--09--FC--FD--FE--FF--00--01--02--03--04--05-:--
+commChannel.isEmpty()=1 (shall be 1)
+hw_resetAndReboot() -> exit

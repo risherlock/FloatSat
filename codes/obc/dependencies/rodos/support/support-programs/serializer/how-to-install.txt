@@ -1,0 +1,24 @@
+
+
+sudo apt-get install libclang-dev
+sudo apt-get install clang-3.8
+sudo apt install llvm
+
+cat << EOT1
+  now do this:
+    cd   rodos/rodos-support/support_programs/serializer/generator
+    ./doit
+
+  - - - - - - - - - -
+
+
+EOT1
+
+cat << OET2
+  see /usr/lib/llvm-3.8/include/clang-c/Index.h
+  /usr/lib/llvm-3.8/include/clang-c/Index.h
+  to compile
+  -I/usr/lib/llvm-3.8/include  -lclang 
+  If it does not work use the Flags
+  default flags:" llvm-config --cxxflags --ldflags
+EOT2

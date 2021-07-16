@@ -1,0 +1,132 @@
+image: nixos/nix:2.3.6
+
+stages:
+ - build_test
+ - results
+ - deploy
+
+
+
+
+# Template for a job which compiles rodos, runs the test suite and
+# collects both the test report as well as coverage information.  This
+# job does NOT fail when a test case has output different from the
+# expected output.  It DOES fail if any compilation fails.
+.cov_tmpl:
+  stage: build_test
+  script:
+    - nix-build with-cmake.nix -A $TARGET
+    - mkdir $TARGET
+    - mv result/* $TARGET/
+  artifacts:
+    paths:
+    - $TARGET
+    when: always
+    expire_in: 1 week
+
+# Template for a job which compiles rodos only, failing if any
+# compilation fails.
+.compile_tmpl:
+  stage: build_test
+  script:
+    - nix-build with-cmake.nix -A $TARGET
+
+
+
+
+# Jobs for the actual ports, using one of the templates from above.
+linux-x86:
+  extends: .cov_tmpl
+  variables:
+    TARGET: linux-x86
+
+linux-makecontext:
+  extends: .cov_tmpl
+  variables:
+    TARGET: linux-makecontext
+
+posix:
+  extends: .cov_tmpl
+  variables:
+    TARGET: posix
+
+sf2:
+  extends: .compile_tmpl
+  variables:
+    TARGET: sf2
+
+raspberrypi3:
+  extends: .compile_tmpl
+  variables:
+    TARGET: raspberrypi3
+
+discovery:
+  extends: .compile_tmpl
+  variables:
+    TARGET: discovery
+
+skith:
+  extends: .compile_tmpl
+  variables:
+    TARGET: skith
+
+
+
+
+# Job collecting coverage results from coverage generating jobs from
+# the build_test stage.  Runs even when a compile only job fails.
+# Merges the collected coverage information into a combined report.
+coverage:
+  stage: results
+  needs:
+    - job: linux-x86
+      artifacts: true
+    - job: linux-makecontext
+      artifacts: true
+    - job: posix
+      artifacts: true
+  script:
+    - nix-env -i lcov binutils
+    - lcov -a $(echo */coverage.info | sed -e 's@ @ -a @g') --output-file coverage.info
+    - genhtml --demangle-cpp -o coverage coverage.info
+  artifacts:
+    paths:
+    - coverage.info
+    - coverage
+    expire_in: 1 week
+
+# Job inspecting the test reports of jobs which have run the test
+# suite.  Fails if any of these test reports shows an error.  Depends
+# ("needs") only on jobs generating a test report.
+#test-report:
+#  stage: results
+#  needs:
+#    - job: linux-x86
+#      artifacts: true
+#    - job: linux-makecontext
+#      artifacts: true
+#    - job: posix
+#      artifacts: true
+#  variables:
+#    GIT_STRATEGY: none
+#  script:
+#    - failures=None
+#    - for r in */test-report.txt; do if [ ! -s $r ]; then echo "$r error free!"; else echo "$r contains ERRORS!"; failures=yes; fi; done
+#    - if [ $failures != None ]; then exit 1; fi
+
+
+
+
+# Job uploading merged coverage report to codecov.io
+codecov.io:
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none
+  script:
+    - nix-env -i curl
+    - nix-env -i bash
+    - curl https://codecov.io/bash -o codecov
+    - bash codecov -f coverage.info
+  needs:
+    - job: coverage
+      artifacts: true

@@ -1,0 +1,5 @@
+It should print '5': 5 
+No new data
+
+This run (test) terminates now!
+hw_resetAndReboot() -> exit

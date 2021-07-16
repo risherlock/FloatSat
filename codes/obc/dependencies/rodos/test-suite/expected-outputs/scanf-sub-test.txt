@@ -1,0 +1,5 @@
+string to parse : 123c456a789b
+substring  123
+substring  456
+substring  789
+hw_resetAndReboot() -> exit

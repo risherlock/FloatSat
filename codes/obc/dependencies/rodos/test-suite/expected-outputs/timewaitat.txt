@@ -1,0 +1,13 @@
+Starting and waiting until 0.03 second
+After 0.03 second
+After 0.02 Seconds  :   0.100000000 1
+After 0.02 Seconds  :   0.200000000 2
+After 0.02 Seconds  :   0.300000000 3
+After 0.02 Seconds  :   0.400000000 4
+After 0.02 Seconds  :   0.500000000 5
+After 0.02 Seconds  :   0.600000000 6
+After 0.02 Seconds  :   0.700000000 7
+After 0.02 Seconds  :   0.800000000 8
+After 0.02 Seconds  :   0.900000000 9
+After 0.02 Seconds  :   1.000000000 10
+hw_resetAndReboot() -> exit

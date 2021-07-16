@@ -1,0 +1,26 @@
+
+
+echo " -------------------------------------------------------"
+echo "                          Send and reseice a downlink tf"
+echo " -------------------------------------------------------"
+\rm tst downlinktf.bin
+
+linux-executable         ccsds-example-downlink-sender-spacecraft.cpp
+tst
+
+echo " -------------------------------------------------------"
+echo generated:
+ls -l downlinktf.bin
+hexdump -C downlinktf.bin
+echo
+echo " -------------------------------------------------------"
+
+linux-executable         ccsds-example-downlink-receive-groundstation.cpp
+tst 
+
+#---------------------------------------
+\rm tst
+
+
+
+

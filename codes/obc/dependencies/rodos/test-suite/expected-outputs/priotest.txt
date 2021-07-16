@@ -1,0 +1,24 @@
+ lopri
+ lopri
+ hipri
+ hipri
+  hi pri cnt = 1
+  hi pri cnt = 1
+  hi pri cnt = 2
+  hi pri cnt = 2
+  hi pri cnt = 3
+  hi pri cnt = 3
+  hi pri cnt = 4
+  hi pri cnt = 4
+  hi pri cnt = 5
+  hi pri cnt = 5
+  hi pri cnt = 6
+  hi pri cnt = 6
+  hi pri cnt = 7
+  hi pri cnt = 7
+  hi pri cnt = 8
+  hi pri cnt = 8
+  hi pri cnt = 9
+  hi pri cnt = 9
+  hi pri cnt = 10
+hw_resetAndReboot() -> exit

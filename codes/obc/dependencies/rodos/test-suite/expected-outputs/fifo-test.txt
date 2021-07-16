@@ -1,0 +1,15 @@
+1. write success 1
+read success 1, data  1
+read success 0 (expected 0)
+is empty  1
+2. write success 1
+3. write success 1
+4. write success 0 (expected 0)
+read success 1, data 2
+read success 1, data 3
+read success 0, data 3
+read success 0, data 3
+read success 0, data 3
+
+This run (test) terminates now!
+hw_resetAndReboot() -> exit

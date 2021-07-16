@@ -1,0 +1,28 @@
+______________________ Node A reads its input UART
+new Message --:-00--01--02--03--04--05--FE--10--11--12-:-- 10 bytes end of msg
+new Message --:hello world how are you doing:-- 29 bytes end of msg
+new Message --:I am doing well:-- 15 bytes end of msg
+new Message --:and how are you?:-- 16 bytes end of msg
+______________________ Node A reads its input UART
+new Message --:-00--01--02--03--04--05--FE--10--11--12-:-- 10 bytes end of msg
+new Message --:hello world how are you doing:-- 29 bytes end of msg
+new Message --:I am doing well:-- 15 bytes end of msg
+new Message --:and how are you?:-- 16 bytes end of msg
+______________________ Node A reads its input UART
+new Message --:-00--01--02--03--04--05--FE--10--11--12-:-- 10 bytes end of msg
+new Message --:hello world how are you doing:-- 29 bytes end of msg
+new Message --:I am doing well:-- 15 bytes end of msg
+new Message --:and how are you?:-- 16 bytes end of msg
+______________________ Node A reads its input UART
+new Message --:-00--01--02--03--04--05--FE--10--11--12-:-- 10 bytes end of msg
+new Message --:hello world how are you doing:-- 29 bytes end of msg
+new Message --:I am doing well:-- 15 bytes end of msg
+new Message --:and how are you?:-- 16 bytes end of msg
+______________________ Node A reads its input UART
+new Message --:-00--01--02--03--04--05--FE--10--11--12-:-- 10 bytes end of msg
+new Message --:hello world how are you doing:-- 29 bytes end of msg
+new Message --:I am doing well:-- 15 bytes end of msg
+new Message --:and how are you?:-- 16 bytes end of msg
+______________________ Node A reads its input UART
+______________________ Node A reads its input UART
+hw_resetAndReboot() -> exit

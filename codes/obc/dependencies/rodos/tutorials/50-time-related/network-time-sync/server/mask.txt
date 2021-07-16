@@ -1,0 +1,14 @@
+
+
+
+
+
+Time sync (SNTP) - Server
+----------------------------------------------------------
+
+Last client node:  [CL_NODE  ]
+Client requests:   [REQ      ]
+
+----------------------------------------------------------
+Current time: [UTC_TIME    ] sec.microsecs
+

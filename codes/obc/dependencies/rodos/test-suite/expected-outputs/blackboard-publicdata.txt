@@ -1,0 +1,16 @@
+Sending 0
+    got 0
+Sending 1
+Sending 2
+Sending 3
+    got 3
+Sending 4
+Sending 5
+Sending 6
+    got 6
+Sending 7
+Sending 8
+Sending 9
+    got 9
+    got 9
+hw_resetAndReboot() -> exit

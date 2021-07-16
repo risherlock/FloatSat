@@ -1,0 +1,23 @@
+
+
+
+
+
+Time sync (SNTP) - Client
+----------------------------------------------------------
+
+Current request: [REQ      ]
+
+Server                        Client
+----------------------------  ----------------------------
+SENT: [S_SENT_TS       ] ms.  SENT: [C_SENT_TS       ] ms.
+RCV:  [S_RCV_TS        ] ms.  RCV:  [C_RCV_TS        ] ms.
+----------------------------------------------------------
+Offset                        Delay
+----------------------------  ----------------------------
+[OFFSET          ] ms.        [DELAY           ] ms.
+----------------------------------------------------------
+
+Interrupt time: [INT_TIME_CLI    ] milliseconds
+
+Send Time:      [SEND_TIME ]

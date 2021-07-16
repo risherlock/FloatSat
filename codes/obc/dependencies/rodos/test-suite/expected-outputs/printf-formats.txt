@@ -1,0 +1,16 @@
+ Showing differnt printf formats
+
+
+ as f : 123456.789     - 0.000000001234567    nan
+ as e : 1.234e5     -1.23456e-9     nan
+
+
+as d:  -12
+as u:  4294967284
+as o:  014
+as x:  000C
+as b:  01010101
+
+
+as s: 'this is a string'
+hw_resetAndReboot() -> exit

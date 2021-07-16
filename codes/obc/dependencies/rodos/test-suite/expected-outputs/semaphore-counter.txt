@@ -1,0 +1,3 @@
+ 20 from 20 Threads finished -> terminate
+counter at the end = 2000000000
+hw_resetAndReboot() -> exit

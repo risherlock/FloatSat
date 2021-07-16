@@ -1,0 +1,1 @@
+Just compile matlib-test.cpp (rodos-executable.sh target-architecture matlib-test.cpp) and the run tst.

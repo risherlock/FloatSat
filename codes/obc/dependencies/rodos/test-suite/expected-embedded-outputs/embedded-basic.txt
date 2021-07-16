@@ -1,0 +1,3 @@
+MAINTEST
+TEST1
+hw_resetAndReboot() -> exit

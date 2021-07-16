@@ -1,0 +1,11 @@
+# Bei der Verwendung von U-Boot muss enable_uart=1 in der Konfigurationsdatei immer gesetzt sein,
+# damit die miniUART-Schnittstelle (Standard-UART beim RPI3) initialisiert,
+# U-Boot darueber gesteuert und neue Images geladen werden können.
+#
+# Dadurch wird allerdings die Frequenz der ARM-CPU auf konstant 250 MHz heruntergesetzt.
+# Mit den zusaetzlichen Eintrag 'force_turbo=1' kann diese Einschränkung umgangen werden,
+# denn damit wird die CPU-Frequenz auf ihr Maximum gesetzt.
+# VORSICHT: Der Raspberry Pi muss dann aber ausreichend gekuehlt werden!
+# (siehe https://github.com/raspberrypi/firmware/issues/553#issuecomment-199486644)
+enable_uart=1
+

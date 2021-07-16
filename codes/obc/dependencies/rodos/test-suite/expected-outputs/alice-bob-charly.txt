@@ -1,0 +1,7 @@
+Bob sending greetings 'i wish you would be here'
+Alice got date 111:  msg: i wish you would be here
+Alice got date 111:  msg: I wish you would be here
+charly knows, message was distributed
+
+This run (test) terminates now!
+hw_resetAndReboot() -> exit

@@ -1,0 +1,165 @@
+Publish cnt1 0.
+  receiver1-1 0
+Publish cnt2 1000.
+  receiver2-1 1000
+  receiver2-2 1000
+Publish cnt1 1.
+  receiver1-1 1
+Publish cnt1 2.
+  receiver1-1 2
+Publish cnt2 1001.
+  receiver2-1 1001
+  receiver2-2 1001
+Publish cnt1 3.
+  receiver1-1 3
+Publish cnt1 4.
+  receiver1-1 4
+Publish cnt2 1002.
+  receiver2-1 1002
+  receiver2-2 1002
+Publish cnt1 5.
+  receiver1-1 5
+Publish cnt1 6.
+  receiver1-1 6
+Publish cnt2 1003.
+  receiver2-1 1003
+  receiver2-2 1003
+Publish cnt1 7.
+  receiver1-1 7
+Publish cnt1 8.
+  receiver1-1 8
+Publish cnt2 1004.
+  receiver2-1 1004
+  receiver2-2 1004
+Publish cnt1 9.
+  receiver1-1 9
+Publish cnt1 10.
+  receiver1-1 10
+Publish cnt2 1005.
+  receiver2-1 1005
+  receiver2-2 1005
+Publish cnt1 11.
+  receiver1-1 11
+Publish cnt1 12.
+  receiver1-1 12
+Publish cnt2 1006.
+  receiver2-1 1006
+  receiver2-2 1006
+Publish cnt1 13.
+  receiver1-1 13
+Publish cnt1 14.
+  receiver1-1 14
+Publish cnt2 1007.
+  receiver2-1 1007
+  receiver2-2 1007
+Publish cnt1 15.
+  receiver1-1 15
+Publish cnt1 16.
+  receiver1-1 16
+Publish cnt2 1008.
+  receiver2-1 1008
+  receiver2-2 1008
+Publish cnt1 17.
+  receiver1-1 17
+Publish cnt1 18.
+  receiver1-1 18
+Publish cnt2 1009.
+  receiver2-1 1009
+  receiver2-2 1009
+Publish cnt1 19.
+  receiver1-1 19
+
+________________________ Seting a filter to modfy data
+Publish cnt1 20.
+  receiver1-1 1000020
+Filter changed the value
+Publish cnt2 1010.
+  receiver2-1 1010
+  receiver2-2 1010
+Publish cnt1 1000021.
+  receiver1-1 2000021
+Filter changed the value
+Publish cnt1 2000022.
+  receiver1-1 3000022
+Filter changed the value
+Publish cnt2 1011.
+  receiver2-1 1011
+  receiver2-2 1011
+Publish cnt1 3000023.
+  receiver1-1 4000023
+Filter changed the value
+Publish cnt1 4000024.
+  receiver1-1 5000024
+Filter changed the value
+Publish cnt2 1012.
+  receiver2-1 1012
+  receiver2-2 1012
+Publish cnt1 5000025.
+  receiver1-1 6000025
+Filter changed the value
+Publish cnt1 6000026.
+  receiver1-1 7000026
+Filter changed the value
+Publish cnt2 1013.
+  receiver2-1 1013
+  receiver2-2 1013
+Publish cnt1 7000027.
+  receiver1-1 8000027
+Filter changed the value
+Publish cnt1 8000028.
+  receiver1-1 9000028
+Filter changed the value
+Publish cnt2 1014.
+  receiver2-1 1014
+  receiver2-2 1014
+Publish cnt1 9000029.
+  receiver1-1 10000029
+Filter changed the value
+Publish cnt1 10000030.
+  receiver1-1 11000030
+Filter changed the value
+Publish cnt2 1015.
+  receiver2-1 1015
+  receiver2-2 1015
+Publish cnt1 11000031.
+  receiver1-1 12000031
+Filter changed the value
+Publish cnt1 12000032.
+  receiver1-1 13000032
+Filter changed the value
+Publish cnt2 1016.
+  receiver2-1 1016
+  receiver2-2 1016
+Publish cnt1 13000033.
+  receiver1-1 14000033
+Filter changed the value
+Publish cnt1 14000034.
+  receiver1-1 15000034
+Filter changed the value
+Publish cnt2 1017.
+  receiver2-1 1017
+  receiver2-2 1017
+Publish cnt1 15000035.
+  receiver1-1 16000035
+Filter changed the value
+Publish cnt1 16000036.
+  receiver1-1 17000036
+Filter changed the value
+Publish cnt2 1018.
+  receiver2-1 1018
+  receiver2-2 1018
+Publish cnt1 17000037.
+  receiver1-1 18000037
+Filter changed the value
+Publish cnt1 18000038.
+  receiver1-1 19000038
+Filter changed the value
+Publish cnt2 1019.
+  receiver2-1 1019
+  receiver2-2 1019
+Publish cnt1 19000039.
+  receiver1-1 20000039
+Filter changed the value
+
+This run (test) terminates now!
+hw_resetAndReboot() -> exit

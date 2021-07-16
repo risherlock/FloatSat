@@ -1,0 +1,9 @@
+
+build
+tst
+tmp
+*~
+*.o
+*.a
+
+

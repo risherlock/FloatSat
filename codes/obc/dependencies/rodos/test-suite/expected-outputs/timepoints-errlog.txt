@@ -1,0 +1,139 @@
+ in MAIN... Produces an error 
+ error done!
+--------------- Application running ------------
+Errors prior to my execution: id  text/name
+---------------------------------
+     0  null pointer setPrioCurrentRunner
+     0  null pointer setPrioCurrentRunner
+________________________ error log:
+id  text/name
+---------------------------------
+     0  null pointer setPrioCurrentRunner
+     0  null pointer setPrioCurrentRunner
+     0  Here starts my execution
+     0  core-fast/timepoints-errlog.cpp : 27
+     0  here starts my loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+________________________ error log:
+id  text/name
+---------------------------------
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+________________________ error log:
+id  text/name
+---------------------------------
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+________________________ error log:
+id  text/name
+---------------------------------
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+________________________ error log:
+id  text/name
+---------------------------------
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+________________________ error log:
+id  text/name
+---------------------------------
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+________________________ error log:
+id  text/name
+---------------------------------
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+________________________ error log:
+id  text/name
+---------------------------------
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+________________________ error log:
+id  text/name
+---------------------------------
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+     0  In the loop
+hw_resetAndReboot() -> exit

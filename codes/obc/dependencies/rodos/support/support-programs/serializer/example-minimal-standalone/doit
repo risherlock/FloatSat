@@ -1,0 +1,20 @@
+\rm -rf generated
+mkdir generated
+\rm -f a.out
+
+
+#echo "______________________________________ position in sereilized buffer "
+#echo
+doit-print_pos_len
+
+
+#echo "______________________________________ Generating serializer/deserialzer code"
+#echo
+doit-generate-serializer-dezerailser
+
+
+#echo "_______________________________ standalone applications"
+
+g++ -I include/ -I. *.cpp  generated/*.cpp
+
+

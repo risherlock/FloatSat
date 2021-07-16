@@ -1,0 +1,23 @@
+
+ even with printfMaks=0, with id all in 1 will allwas be printed
+
+Did you see? no printf from main!************
+My location in source code : core-fast/printfconditional.cpp : 19
+ mask/id 1
+ mask/id 9 (bit 0 and 3 are set)
+ ------- mask/id all in 1
+ mask/id 2
+ ------- mask/id all in 1
+ mask/id 4
+ ------- mask/id all in 1
+ mask/id 8
+ mask/id 9 (bit 0 and 3 are set)
+ ------- mask/id all in 1
+ ------- mask/id all in 1
+ ------- mask/id all in 1
+ ------- mask/id all in 1
+ ------- mask/id all in 1
+ ------- mask/id all in 1
+ ------- mask/id all in 1
+ ------- mask/id all in 1
+hw_resetAndReboot() -> exit

@@ -1,0 +1,23 @@
+*** See support_programs/maskgen to generate mask.h****
+
+publishing counter1 [CNT1       ]  counter2  [CONST      ]
+publishing counter2 [CNT2       ] (shall be allways 100)
+publishing postion  [PX     ][PY     ][PZ     ]
+_____________________________________________________________________
+
+AsyncFifo  position: [RX     ][RY     ][RZ     ] (waiting 20 seconds)
+Combuf     position: [CX     ][CY     ][CZ     ] (waiting 20 seconds)
+SnyFifo    counter1  [SC     ]
+
+Putter MultipleReceiver [NB ] bytes, data: [MD     ] Topic: [TID    ]
+
+Trhread    counter1  
+           put: len [PL   ] topic [PT    ]       Data [PD     ]
+           run:                                       [RD     ]
+
+_____________________________________________________________________
+receiver simple:
+Subscriber         (Example1)  [E1B] bytes, data: [E1D    ] From [F1   ][F2   ]
+SubscriberReceiver (Example2)                     [E2D    ]
+SubscriberFunction (Example3)                     [E3D    ]
+

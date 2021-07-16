@@ -1,0 +1,22 @@
+
+If you do not want to modify your code, but need to
+register all prints without a mask, just with the name
+of the field:
+
+_______________________________________________________________ From
+
+
++---------------------------------+
+| time now [NOW   ] counter [CNT] |
++---------------------------------+
+
+_______________________________________________________________ generates
+
+const char* screen[] = {0,0,0,0};
+#define CLEAR_MASK " "
+#define INIT_MASK()
+
+
+#define NOW  "\nNOW = "
+#define CNT  "\nCNT = "
+

@@ -1,0 +1,15 @@
+ Using SNPRINTF to protect from out of bounds memory access:
+
+ For this test let's assume we only have 4 Bytes of Buffer
+ We will print "Hello World" in there.
+ If we only use our memory, we will only "Hel" and the trailing \0
+
+ Using SPRINTF we get: Hello World!
+ OOPS! We did use memory outside of this buffer!
+
+ Using SNPRINTF we get: Hel
+ This time it worked!
+
+ If you want to see what happens if the buffer is really that small, just change the buffer size.
+ If you are lucky on your platform you get a segmentation fault, otherwise you just wrote memory that is not yours!
+hw_resetAndReboot() -> exit

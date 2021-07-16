@@ -1,0 +1,39 @@
+
+Other ports which can be sent on request.
+Please contact
+	sergio.montenegro@uni-wuerzburg.de
+
+In this distribution
+    on linux
+    posix
+    stm32f4
+    smartfusion 2 (SF2)
+    raspberrypi3
+
+
+On other operating systems:
+	on-freertos
+	on-posix-virtex4
+	on-rtems
+	on-windows
+
+Bare metal (Direct on the CPU)
+	arm_cortex
+	arm-cortexA8
+	arm-cortexA9
+	arm-cortexA9_zinq
+	arm_v4
+	avr32
+	bf561
+	imx
+	leon
+	linux-makecontext
+        bf561/
+	microblaze
+	ppc405
+	raspberrypi
+	smatfusion
+	sparc64
+	virtex4
+	zynq
+

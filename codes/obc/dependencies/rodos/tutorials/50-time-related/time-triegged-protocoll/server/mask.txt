@@ -1,0 +1,21 @@
+
+
+
+
+
+Time sync (SNTP) - Server
+----------------------------------------------------------
+
+Last client node:  [CL_NODE  ]
+Client requests:   [REQ      ]
+
+----------------------------------------------------------
+Interrupt time: [INT_TIME_SRV    ] milliseconds
+
+----------------------------------------------------------
+                Time Triggered Reports
+-------------+--------------------------------------------+
+Node Nr.     | [NODE1]   [NODE2]    [NODE3]    [NODE4]    |
+Arrival Time | [ARRIVAL1][ARRIVAL2] [ARRIVAL3] [ARRIVAL4] |
+Message Data | [CNT1 ]   [CNT2 ]    [CNT3 ]    [CNT4 ]    |
+-------------+--------------------------------------------+

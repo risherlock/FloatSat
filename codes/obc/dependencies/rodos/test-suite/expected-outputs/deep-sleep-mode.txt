@@ -1,0 +1,9 @@
+In 0.05 Seconds, Sleep for 0.10 Seconds
+Time now:   0.100000000
+Time now:   0.200000000
+Time now:   0.300000000
+Time now:   0.400000000
+Deepsleep now
+Time now:   0.500000000
+Wake up
+hw_resetAndReboot() -> exit

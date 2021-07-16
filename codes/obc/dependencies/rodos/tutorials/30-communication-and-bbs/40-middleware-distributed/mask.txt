@@ -1,0 +1,20 @@
+
+
+
+*** See support_programs/maskgen ****
+
+
+Topic-ID  Sender          Receiver
+--------  --------        --------
+ 11       [S11   ]        [R11   ]
+ 12       [S12   ]        [R12   ]
+ 13       [S13   ]        [R13   ]
+ 14       [S14   ]        [R14   ] see demo_topic.cpp: only local
+ 15       [S15   ]        [R15   ]
+ 16       [S16   ]        [R16   ] [R16S    ] 
+
+---------------------------------------------
+
+          Number of arrived msgs: [MSGCNT]
+
+

@@ -1,0 +1,1 @@
+Functions at the end of matlib.h are not yet tested (lines 639ff)

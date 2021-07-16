@@ -1,0 +1,9 @@
+
+echo "first compile parsers"
+echo "  cd generator"
+echo "  doit"
+echo
+echo "the try the examples here"
+echo
+
+

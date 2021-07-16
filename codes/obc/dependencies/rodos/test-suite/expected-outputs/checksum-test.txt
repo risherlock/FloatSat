@@ -1,0 +1,498 @@
+Checksum of 1: 2
+  OK 36774
+  checksum   1024
+  chcksumxor 2
+  hash; 24656
+Checksum of 2: 6
+  OK 32971
+  checksum   3072
+  chcksumxor 6
+  hash; 16952
+Checksum of 3: 21
+  OK 29962
+  checksum   10752
+  chcksumxor 21
+  hash; 13349
+Checksum of 4: 88
+  OK 54718
+  checksum   45056
+  chcksumxor 88
+  hash; 27211
+Checksum of 5: 445
+  OK 21848
+  checksum   32257
+  chcksumxor 445
+  hash; 31798
+Checksum of 6: 2676
+  OK 19503
+  checksum   4097
+  chcksumxor 2676
+  hash; 13365
+Checksum of 7: 18739
+  OK 30857
+  checksum   35329
+  chcksumxor 18739
+  hash; 11898
+Checksum of 8: 149920
+  OK 64393
+  checksum   29698
+  chcksumxor 149920
+  hash; 9791
+Checksum of 9: 1349289
+  OK 65122
+  checksum   18948
+  chcksumxor 1349289
+  hash; 31278
+Checksum of 10: 13492900
+  OK 503
+  checksum   14347
+  chcksumxor 13492900
+  hash; 29992
+Checksum of 11: 148421911
+  OK 18697
+  checksum   25098
+  chcksumxor 148421911
+  hash; 27227
+Checksum of 12: 1781062944
+  OK 46900
+  checksum   37899
+  chcksumxor 1781062944
+  hash; 13863
+Checksum of 13: 23153818285
+  OK 33461
+  checksum   47625
+  chcksumxor 1678981800
+  hash; 26429
+Checksum of 14: 324153456004
+  OK 23036
+  checksum   13331
+  chcksumxor 2030908879
+  hash; 15905
+Checksum of 15: 4862301840075
+  OK 18836
+  checksum   15896
+  chcksumxor 398861991
+  hash; 19034
+Checksum of 16: 77796829441216
+  OK 7972
+  checksum   41014
+  chcksumxor 2086824449
+  hash; 20306
+Checksum of 17: 1322546100500689
+  OK 19782
+  checksum   25175
+  chcksumxor 1115703816
+  hash; 22820
+Checksum of 18: 23805829809012420
+  OK 11178
+  checksum   39016
+  chcksumxor 2903371138
+  hash; 9038
+Checksum of 19: 452310766371235999
+  OK 14974
+  checksum   3714
+  chcksumxor 3689055905
+  hash; 30290
+Checksum of 20: 9046215327424720000
+  OK 23668
+  checksum   37139
+  chcksumxor 760393833
+  hash; 23134
+Checksum of 21: 5503081138823603861
+  OK 5461
+  checksum   51914
+  chcksumxor 3991239094
+  hash; 24182
+Checksum of 22: -8059423461847576348
+  OK 23283
+  checksum   2243
+  chcksumxor 1980202475
+  hash; 22605
+Checksum of 23: -899298885398739821
+  OK 55416
+  checksum   20314
+  chcksumxor 1600276734
+  hash; 27947
+Checksum of 24: -3136429175860204064
+  OK 62587
+  checksum   13616
+  chcksumxor 3788982184
+  hash; 17240
+Checksum of 25: -4623753101666895111
+  OK 61228
+  checksum   23356
+  chcksumxor 2178784244
+  hash; 21321
+Checksum of 26: 8909627872627588452
+  OK 44748
+  checksum   52479
+  chcksumxor 927442492
+  hash; 17774
+Checksum of 27: 752279602720717223
+  OK 61060
+  checksum   57985
+  chcksumxor 293608439
+  hash; 11569
+Checksum of 28: 2617084802470530656
+  OK 36006
+  checksum   22682
+  chcksumxor 705007267
+  hash; 17524
+Checksum of 29: 2108482976807182589
+  OK 32472
+  checksum   19082
+  chcksumxor 2194552549
+  hash; 22600
+Checksum of 30: 7914257083086822852
+  OK 65252
+  checksum   27915
+  chcksumxor 3747040038
+  hash; 12328
+Checksum of 31: 5534296617467337435
+  OK 62815
+  checksum   22277
+  chcksumxor 3506741160
+  hash; 14115
+Checksum of 32: -7369948978140718208
+  OK 54993
+  checksum   13630
+  chcksumxor 546567667
+  hash; 12854
+Checksum of 33: -3400643320419529823
+  OK 63489
+  checksum   16266
+  chcksumxor 240695115
+  hash; 9035
+Checksum of 34: -4941408452006704252
+  OK 43019
+  checksum   19751
+  chcksumxor 728472757
+  hash; 16697
+Checksum of 35: -6928599156848684241
+  OK 58177
+  checksum   56163
+  chcksumxor 791558377
+  hash; 8751
+Checksum of 36: 8824847385381089984
+  OK 52916
+  checksum   35061
+  chcksumxor 2564068656
+  hash; 23670
+Checksum of 37: -5522040067671599643
+  OK 12183
+  checksum   42821
+  chcksumxor 1906839605
+  hash; 29026
+Checksum of 38: -6923337760715718620
+  OK 29527
+  checksum   12641
+  chcksumxor 1872141528
+  hash; 23078
+Checksum of 39: 6690988437730248099
+  OK 23923
+  checksum   51954
+  chcksumxor 4294143787
+  hash; 25121
+Checksum of 40: -9061623596433350240
+  OK 24359
+  checksum   21732
+  chcksumxor 4235478265
+  hash; 22107
+Checksum of 41: -2591685979576327479
+  OK 35615
+  checksum   64278
+  chcksumxor 3858127260
+  hash; 17200
+Checksum of 42: 1829653300051555620
+  OK 32040
+  checksum   62601
+  chcksumxor 2597687007
+  hash; 12591
+Checksum of 43: 4888115607378685239
+  OK 55906
+  checksum   27333
+  chcksumxor 1561296392
+  hash; 19315
+Checksum of 44: -6283842159852468832
+  OK 60138
+  checksum   13640
+  chcksumxor 3851783033
+  hash; 11384
+Checksum of 45: -6071736087717823155
+  OK 21699
+  checksum   40792
+  chcksumxor 840196479
+  hash; 25682
+Checksum of 46: -2598698929376590844
+  OK 59335
+  checksum   2438
+  chcksumxor 1203606803
+  hash; 17486
+Checksum of 47: 6988358835267091691
+  OK 51433
+  checksum   18209
+  chcksumxor 3556057022
+  hash; 17710
+Checksum of 48: 3399830766048472128
+  OK 9619
+  checksum   34945
+  chcksumxor 3186478161
+  hash; 30789
+Checksum of 49: 571010872989169777
+  OK 61336
+  checksum   51897
+  chcksumxor 277551916
+  hash; 13406
+Checksum of 50: -8342944497960614332
+  OK 35651
+  checksum   4339
+  chcksumxor 511045226
+  hash; 12624
+Checksum of 51: -1215055700671643713
+  OK 57484
+  checksum   33567
+  chcksumxor 3422846712
+  hash; 17199
+Checksum of 52: -7842664213796818176
+  OK 10306
+  checksum   7380
+  chcksumxor 2966532467
+  hash; 17764
+Checksum of 53: 8613910364088323893
+  OK 13886
+  checksum   5908
+  chcksumxor 83922659
+  hash; 31268
+Checksum of 54: 3982557818030699876
+  OK 35363
+  checksum   52384
+  chcksumxor 510154328
+  hash; 12837
+Checksum of 55: -2320248892826126157
+  OK 17059
+  checksum   22446
+  chcksumxor 123087199
+  hash; 11074
+Checksum of 56: -806729482296203424
+  OK 27307
+  checksum   48574
+  chcksumxor 2502659247
+  hash; 26715
+Checksum of 57: -9090092343464491879
+  OK 40506
+  checksum   43811
+  chcksumxor 1301579189
+  hash; 31572
+Checksum of 58: 7730222216636467940
+  OK 9822
+  checksum   22702
+  chcksumxor 573853378
+  hash; 22568
+Checksum of 59: -5085491061187181881
+  OK 6148
+  checksum   48972
+  chcksumxor 1424963093
+  hash; 16175
+Checksum of 60: 8465185581831464672
+  OK 49130
+  checksum   43245
+  chcksumxor 3752380303
+  hash; 31582
+Checksum of 61: -132513572148100195
+  OK 57288
+  checksum   44868
+  chcksumxor 1243149318
+  hash; 18514
+Checksum of 62: -8215841473182212028
+  OK 14484
+  checksum   37195
+  chcksumxor 703993841
+  hash; 15179
+Checksum of 63: -1089178746611912453
+  OK 13749
+  checksum   38817
+  chcksumxor 2947073352
+  hash; 24356
+Checksum of 64: 4079536511675809536
+  OK 33798
+  checksum   56527
+  chcksumxor 3929101271
+  hash; 11617
+Checksum of 65: 6915456226993897281
+  OK 3736
+  checksum   10031
+  chcksumxor 574840205
+  hash; 15904
+Checksum of 66: -4748490861141569788
+  OK 57377
+  checksum   7469
+  chcksumxor 3563993020
+  hash; 22343
+Checksum of 67: -4554238443422798257
+  OK 17205
+  checksum   24390
+  chcksumxor 496449036
+  hash; 21861
+Checksum of 68: 3906435100312096064
+  OK 13116
+  checksum   29822
+  chcksumxor 4195237702
+  hash; 19805
+Checksum of 69: -7157139184108645755
+  OK 18120
+  checksum   49985
+  chcksumxor 2541775184
+  hash; 16723
+Checksum of 70: -2937652897447309148
+  OK 42092
+  checksum   4378
+  chcksumxor 3648703717
+  hash; 26473
+Checksum of 71: -5659170907953881661
+  OK 61241
+  checksum   29477
+  chcksumxor 1163496393
+  hash; 8772
+Checksum of 72: -1631935751069343968
+  OK 47816
+  checksum   52531
+  chcksumxor 1142582324
+  hash; 13345
+Checksum of 73: -8450845385804799895
+  OK 37001
+  checksum   15153
+  chcksumxor 3991122060
+  hash; 13149
+Checksum of 74: 1826739956569562788
+  OK 37214
+  checksum   22683
+  chcksumxor 4178492651
+  hash; 24893
+Checksum of 75: 7878288226750347863
+  OK 9492
+  checksum   26315
+  chcksumxor 3570267953
+  hash; 11342
+Checksum of 76: 8454094874320785952
+  OK 4360
+  checksum   12530
+  chcksumxor 1812310111
+  hash; 19534
+Checksum of 77: 5329262742866211821
+  OK 28124
+  checksum   28401
+  chcksumxor 3602312151
+  hash; 8510
+Checksum of 78: -8592619751755165052
+  OK 44024
+  checksum   29005
+  chcksumxor 241185624
+  hash; 14955
+Checksum of 79: 3712570338595370763
+  OK 45824
+  checksum   33461
+  chcksumxor 3089449990
+  hash; 18268
+Checksum of 80: 1857721908276835264
+  OK 49493
+  checksum   46287
+  chcksumxor 3146434555
+  hash; 12873
+Checksum of 81: 2901521980747243537
+  OK 19084
+  checksum   60033
+  chcksumxor 1915299535
+  hash; 11556
+Checksum of 82: -1882870536950200892
+  OK 52072
+  checksum   3484
+  chcksumxor 316045052
+  hash; 30045
+Checksum of 83: -8704301977190261025
+  OK 31926
+  checksum   9921
+  chcksumxor 2431387047
+  hash; 18551
+Checksum of 84: 6708396864400138624
+  OK 13905
+  checksum   5261
+  chcksumxor 2415076071
+  hash; 23592
+Checksum of 85: -1635332810984316971
+  OK 21442
+  checksum   57135
+  chcksumxor 4008918700
+  hash; 21579
+Checksum of 86: 6935330845025153508
+  OK 43721
+  checksum   23734
+  chcksumxor 4189556556
+  hash; 9032
+Checksum of 87: -5368770915226848045
+  OK 49438
+  checksum   10010
+  chcksumxor 2550808479
+  hash; 25382
+Checksum of 88: 7163505376485714144
+  OK 27330
+  checksum   32994
+  chcksumxor 3277966031
+  hash; 18002
+Checksum of 89: -8084064072605747655
+  OK 27228
+  checksum   56130
+  chcksumxor 756651191
+  hash; 31612
+Checksum of 90: -8142747659844775836
+  OK 49022
+  checksum   4387
+  chcksumxor 2981115457
+  hash; 15444
+Checksum of 91: -3120274097492536345
+  OK 52056
+  checksum   23398
+  chcksumxor 1437097178
+  hash; 11310
+Checksum of 92: 8082688210039482208
+  OK 61254
+  checksum   3252
+  chcksumxor 361717114
+  hash; 24618
+Checksum of 93: -4626503488419770819
+  OK 63024
+  checksum   33635
+  chcksumxor 1399395755
+  hash; 15726
+Checksum of 94: 7830529857570781892
+  OK 50245
+  checksum   24846
+  chcksumxor 2402491310
+  hash; 8809
+Checksum of 95: 6030573520842215195
+  OK 51571
+  checksum   60167
+  chcksumxor 639478193
+  hash; 13136
+Checksum of 96: 7085991715856558720
+  OK 52119
+  checksum   53463
+  chcksumxor 1118557548
+  hash; 15709
+Checksum of 97: 4811665710832786145
+  OK 19546
+  checksum   4831
+  chcksumxor 3269190297
+  hash; 20282
+Checksum of 98: -8072106254835299708
+  OK 34513
+  checksum   10525
+  chcksumxor 2226082981
+  hash; 14927
+Checksum of 99: -5928524059183951505
+  OK 24961
+  checksum   60253
+  chcksumxor 3426908072
+  hash; 32063
+
+This run (test) terminates now!
+hw_resetAndReboot() -> exit

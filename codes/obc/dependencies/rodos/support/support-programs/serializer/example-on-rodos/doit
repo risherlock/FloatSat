@@ -1,0 +1,18 @@
+\rm -rf generated
+mkdir generated
+\rm -f a.out
+
+echo "______________________________________ position in sereilized buffer "
+echo
+doit-print_pos_len
+
+echo "______________________________________ Generating serializer/deserialzer code"
+echo
+doit-generate-serializer-dezerailser
+
+
+echo "_______________________________ compiling RODOS user application and generated files"
+
+linux-executable  -I. -Iinclude application.cpp generated/*.cpp
+tst
+

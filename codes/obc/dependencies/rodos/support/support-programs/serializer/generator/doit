@@ -1,0 +1,13 @@
+
+
+g++ -o bitFieldsSerializer bitFieldsSerializer.cpp
+
+
+cd parser
+./doit 
+
+mv serializer ..
+mv print_serialized_pos_len ..
+rm -f print_serialized_pos_len.d  serializer.d 
+
+

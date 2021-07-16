@@ -1,0 +1,45 @@
+A1
+B Initialisation
+B1
+A2
+B2
+A3
+B3
+A4
+B1
+B2
+B3
+B1
+B2
+B3
+B1
+B2
+B3
+A1
+B1
+A2
+B2
+A3
+B3
+A4
+B1
+B2
+B3
+B1
+B2
+B3
+B1
+B2
+B3
+B1
+A1
+B2
+A2
+B3
+A3
+B1
+A4
+B2
+B3
+----------------------------------------------------------- end now
+hw_resetAndReboot() -> exit

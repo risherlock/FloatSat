@@ -1,0 +1,26 @@
+
+
+echo " -------------------------------------------------------"
+echo "                          Send and reseice a uplink tf"
+echo " -------------------------------------------------------"
+\rm tst uplinktf.bin
+
+linux-executable         ccsds-example-uplink-sender-groundstation.cpp
+tst
+
+echo " -------------------------------------------------------"
+echo generated:
+ls -l uplinktf.bin
+hexdump -C uplinktf.bin
+echo
+echo " -------------------------------------------------------"
+
+linux-executable         ccsds-example-uplink-receive-spacecraft.cpp
+tst 
+
+#---------------------------------------
+\rm tst
+
+
+
+

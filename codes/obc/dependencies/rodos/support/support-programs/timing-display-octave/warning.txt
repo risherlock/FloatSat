@@ -1,0 +1,5 @@
+
+octave wird laaaaaaange brauchen um die datei zu lesen und ausgeben!
+
+
+

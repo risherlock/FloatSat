@@ -1,0 +1,27 @@
+#include "rodos.h"
+
+#include "demo_topics.h"
+
+static Application senderName("Publisher 02 Timeevent", 1200);
+
+/** ANTI-Example
+ ** do no publish from an interrutp server
+ *  see tutorials interrupts to see how to do it
+ */
+
+class MyPublisher02 : public TimeEvent {
+public:
+  void handle(){
+    xprintf("sendTimed at %lld\n", NOW());
+    long seconds = NOW() / SECONDS;
+    counter2.publish(seconds);
+  }
+
+  void init() {
+    activatePeriodic(4*SECONDS, 500*MILLISECONDS);
+  }
+};
+
+
+static MyPublisher02 myPublisher;
+

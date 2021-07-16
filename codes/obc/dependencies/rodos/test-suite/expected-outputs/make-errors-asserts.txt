@@ -1,0 +1,28 @@
+ in MAIN... Produces an error 
+ error done!
+--------------- Application running ------------
+Errors prior to my execution: id  text/name
+---------------------------------
+     0  null pointer setPrioCurrentRunner
+     0  null pointer setPrioCurrentRunner
+[31m
+!! Programm ERROR making an error!!
+assert ok
+assert wrong
+[31m
+!! Programm ERROR core-fast/make-errors-asserts.cpp : 52!!
+before assert ok
+before assert not ok
+[31m
+!! Programm ERROR core-fast/make-errors-asserts.cpp : 31!!
+ x = -20
+________________________ error log:
+id  text/name
+---------------------------------
+     0  null pointer setPrioCurrentRunner
+     0  null pointer setPrioCurrentRunner
+     0  making an error
+     0  core-fast/make-errors-asserts.cpp : 47
+     0  core-fast/make-errors-asserts.cpp : 52
+     0  core-fast/make-errors-asserts.cpp : 31
+hw_resetAndReboot() -> exit

@@ -1,0 +1,33 @@
+﻿
+generates space sequences to move the cursor to the corresponding
+position of the field
+
+
+_______________________________________________________________ From
+
+
++---------------------------------+
+| time now [NOW   ] counter [CNT] |
++---------------------------------+
+
+_______________________________________________________________ generates
+
+const char* screen[] = {
+"",
+"+---------------------------------+",
+"| time now [      ] counter [   ] |",
+"+---------------------------------+",
+"",
+ 0 };
+
+
+
+#define CLEAR_MASK "\x1B[2J\x1B[1;1H"
+#define INIT_MASK() PRINTF("%s", CLEAR_MASK); for(int i = 0; screen[i] != 0; i++) PRINTF("%s\n", screen[i]);
+
+// Move Cursor to
+#define NOW  "\x1B[3;13H"
+#define CNT  "\x1B[3;30H"
+
+
+

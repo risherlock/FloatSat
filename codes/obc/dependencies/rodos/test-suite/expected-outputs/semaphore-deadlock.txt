@@ -1,0 +1,15 @@
+Deadlock will come...
+Deadlock will come...
+Deadlock will come...
+C enter 1
+A enter 2
+C enter 2
+B enter 2
+A enter 1
+
+This run (test) terminates now! but first error log:
+time(secs)         id  text/name
+---------------------------------
+
+This run (test) terminates now!
+hw_resetAndReboot() -> exit

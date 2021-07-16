@@ -1,0 +1,17 @@
+#pragma once
+// #include "macros-bits-bytes.h" warning: conflicts with SET_BIT, and MIN,  include by yourself
+#include "rodos-result.h"
+#include "matlib.h"
+#include "misc-support.h"
+#include "monitoringMsg.h"
+#include "random.h"
+#include "ringbuffer.h"
+#include "sortedlist.h"
+#include "allocableobjects.h"
+#include "stream-bytesex.h"
+// #include "filesystem.h"
+#include "scanf-substitue.h"
+#include "synccommbuffer.h"
+#include "s3p-code.h"
+#include "s3p-synchronous-interface.h"
+#include "s3p-asynchronous-interface.h"

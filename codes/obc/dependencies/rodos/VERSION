@@ -1,0 +1,912 @@
+
+RODOS Versioning
+
+     ____  ____  ____  ____  _____
+    / __ \/ __ \/ __ \/ __ \/ ___/
+   / /_/ / / / / / / / / / /\__ \
+  / _, _/ /_/ / /_/ / /_/ /___/ /
+ /_/ |_|\____/_____/\____//____/
+
+ A real-time embedded operating system,
+ designed for highly dependable environments.
+
+
+----------------------------------------------
+
+202:    a: int, long int, long long, etc -> uint32_t, int64_t, etc etc (not concluded)
+        b: #defines & Macros -> c++ expressions
+
+201:    a: Threads mit statische stack array
+        b: rm printf host infor headers from testsuite
+   
+
+200:	Big SIMPLIFICATION!! many ports are missing!
+	a: remove all obsolete scripts in make now in scripts/*
+	   simplify the remaining scripts
+           rm default_usr_configs/* (never used)
+           rm many #ifndef NO_RODOS_NAMESPACE (never used)
+           rm includes which were never used
+           correct some spelling errors
+           reformat using clang-format
+        b: mv rodos-core/* , rodos-tutorial tutorial, rodos-support support
+           Posix: substitute identical files to Linux with symbolic links
+           params.h -> platform-parameter.h
+           clang++ -> g++ (clang is good to find warnings, but semaphore crashes!)
+           all laptop prors are ready
+        c: reduce build scripts to only 2 generic scripts rodos-*.sh
+            rename many *_* to *-*
+            typedef TTime -> int64_t
+            add stm32f4
+            add empty template for new ports
+            correct bug in semaphore-tutorial (not the sema implementation)
+            use clang compiler instead of gcc
+            add s3p encoder/decoder to support-lib
+        d:  PRIORITY_CEILING and PROTECT_WITH_SEMAPHORE deprecated, use now PRIORITY_CEILER_IN_SCOPE and PROTECT_SCOPE
+            rename ERROR(...) -> RODOS_ERROR(...)
+            add RODOS_ASSERT(..), substitute many if(xxx) RODOS_ERROR(...);
+        e:  Änderungen auf git-informatik vom alten RODOS-133 übernhemne
+                Commbuffer::put(..) -> Commbuffer::put(const ..)
+                new: SNPRINTF
+                correct some support-lib tutorials
+        f:  rename semaphore.h & debug.h -> rodos-semaphore.h & rodos-debug.h
+            silent RODOS_ERROR(...)
+            Timpoings::add now bool
+	    add result class
+        g:  add raspberypy & Update tutotrials
+            add sf2
+            beginning of test suite
+        h:  add cmake
+        i:  instead of include "rodos.h" in src & apis : include-what-you-use
+        j:  Bug corrections in matlib
+        k:  substitute TT8000 Random by KISS
+        l:  substitute abort() by exit(0) in hwReset
+
+
+
+
+133:
+	   correct some misspellings
+	a: correct name and parameter checkSumXor -> checkSumXor32
+		old yprintf without %e as example "yprintf.cpp-more-simple-no%e"
+	b: adding rotation function findRoationsAngleAxis to matlib
+	c: adding synccombuffer from TUM
+        d: adding rotation function direction_cos_matrix to matlib
+
+
+
+132:
+	a: adding POSIX for 64 bit
+	b: POSIX-Priority_Ceiling do not use semaphore, it sets prio like bare metal
+	c: Correction Thread::setpriority for POSIX
+
+
+131:
+	a: tcp angepasst damit es auf SF2 läuft
+	b: Support-progs Command Generator: comments #, app def @
+	c: now using default arm tools in $PATH
+	d: topic parameter "onlylocal" to skip gateways
+        e: add CCSDS getlens and corrected bug in publicdomian lwip librariy
+	f: yprintf %e extention
+	g: semaphore scope protector,  serializer in namesapce Common
+	h: volatile in semaphore
+	i: BUSY_WATING, AT as inline functions, Bug corrected in matlib
+
+
+
+
+130:
+	a: without copy rigth headers
+	b: sf2-vfe -> sf2
+	c: Bug correction in sf2 ethernet (receive interrupts)
+	d: typos in comments, tools: main() return 0
+	e: upd sender: now with reopen to change port and adr of destination
+	f: new tcp interface (tcp.h, */*/hw_tcp.cpp) but only on linux
+
+129: ---- 
+
+128:
+	SF2 updates von PTS
+	Korrigierte Schreibfehler in Kommentaren
+	neu: float getCpuLoad()
+	weg: warnings in ip-stack
+	PRIORITY_CEILING updates
+
+
+127:
+	b: .../filesystem/bare-metal/stm32f4/diskio.cpp DMA protected with Priority Ceiling
+	a: sf2 updates from PTS, toturials/advanced/test -> tutorials/tests, udp update
+	added raspberrypi3 port
+
+126:
+	smartfussion integriert
+	a: git merge master & develop, -> Can updates from TUB
+	b: CRLF from original files, Files from uni-Wue as unix files (only \n)
+	c: sleep mode and deepsleep mode für stm32f4 and linux, Minor make/sf2-* corrections
+	d: support_programs/maskgenerator/* make it a little more clear
+	e: smartfusion weg, es bleibt nur sf2-*
+	f: ccsds, spacecraft_id now as parameter, not a constant any more 
+
+
+125:
+	DOS files -> unix filex (CRLF -> LF) see dos2unix command
+
+	new tutorial
+		roddos-qt-interface
+	support-programs server-qt etc removed
+	c: cmake weg
+	d: PRINTF_CONDITIONAL now with mask instead of verbosity
+
+124:
+	CCSDS Corrections
+	new: SPRINTF
+	removed Deprecated code in subscriver 
+    minimalistic example for s3p serial link interface
+    new maks generator
+
+123
+  more support for ccsds and pus,
+  macros SET_BIT & GET_BIT -> SET_BIT_IN_BYTED & GET_BIT_FROM_BYTE
+	becouse conflicts in some Basic support packages and becouse it works onls on a single byte
+  topicFilter has now prolog() and epilog() instead of modify()
+  new: CCSDS Support & Trennung ccsdslibs & ccsdstests and CCDDS Bug corrections
+    CCSDS Support now defines SP & TF as type
+
+122:
+   new: zync and hypervisor
+   new: latest hal for Biros (ppc405)
+   new: lwip ip stack integrated
+   new: more support for ccsds and pus
+   new: ERROR registers all errors in TimePoints::errorLog
+   
+   macros SET_BIT & GET_BIT -> SET_BIT_IN_BYTED & GET_BIT_FROM_BYTE
+      because conflicts in some basic support packages and because it works onls on a single byte
+   TimePoits now as template with list_len as parameter
+   Updates from ckecks from BSSE
+   
+   stm32f4: allow selective umount of interrupts and mocking of IO registers
+
+   bugfix: SCHEDULER_STACKSIZE  in ports where it was not used was 0, not it is 8 due to stack[SCHEDULER_STACKSIZE]
+   bugfix: in case of thread with period==0 waiting for next beat
+   bugfix: rapberrypi: removed conficting stdint.h
+
+
+121.2:
+   bugfix: removed extern c in stdlib/string_pico 
+   bugfix: move string_pico functions to RODOS namespace 
+
+
+121.1:
+   stdlib_pico.cpp: removed compiler warnings by adding "static"
+   timemodel: updated leap seconds
+
+   stm32f4: hal_spi - added slave mode
+   stm32f4: hal_pwm - bugfix in constructor
+   stm32f4: hal_uart - bugfix noise error interrupt not cleared when DMA is enabled
+   stm32f4: hal_uart - bugfix wrong initialisation hwFlowCtrl variable 
+   stm32f4: hal_uart - bugfix reset of CTS/RTS pins when hw flow control is not enabled
+
+
+121:
+   new: generator recursive serializer/deserializer (big endian) for data comms, eg TM/TC
+        rodos-support/support_programs/serializer
+   new: added strtol() with stdlib_pico 
+
+   bare-metal-generic/thread_on_hw.cpp : checks for stack overflow for all threads to be activated
+   bytesex updated, deprecated old calls
+   topicreporter now register only active subscribers
+   
+   bugfix: in  MultipleReaderFifo::getReaderId()
+   bugfix: race condition in gateway
+   bugfix: problem in timemmodel
+   
+   stm32f4: HAL_ADC update -> + channels ADC_CH_16, ADC_CH_17, ADC_CH_18
+   stm32f4: HAL_I2C now pulses the clock several times on reset
+   stm32f4: Timer for system time changed from TIMER 7 to TIMER 11
+   stm32f4: bugfix: hwGetNanoseconds() returned wrong values, if interrupted
+
+
+120:
+   stm32f4: added SPI 4-6
+   stm32f4: added getcharNoWait()
+   stm32f4: removed SDCard folder
+   cortexA8: fixed stack alignment
+   linux, linux-makecontext, stm32f4, stm32: removed old uart implementation
+   IP_BORADCAST_ADR in userdefine.h 
+   BUG in linkinterface suspendUntilWriteFinished(CAN_TX_TIMEOUT); -> can.suspendUntilWriteFinished(NOW() + CAN_TX_TIMEOUT); 
+   bug correction: getBitField(...), setBitField(...) fixed wrong calculation of byte index
+   matlib updates for gedodetic, ecef, eci
+   removed many compiler warnings
+
+119:
+   stm32f4: Pin assignement in HAL constuctor for SPI
+
+   extention in compiler scripts to allow userconfigs
+   I2C_TIMEOUT_IN_NS now userconfig.h-able
+
+   extentions in matlib (class Rotor & class RPY)
+   extentions in mat: trust and lowpassfilter (signalprocessing.h)
+   BUG in malib.cpp Quaterion(RPY) roll and yaw was switched
+   matlib.h (removed double comments)
+   added implementation of gedodetic, ecef, eci
+   added double drand
+
+118:
+   New port: cortexA8 (including HAL GPIO + UART)
+   
+   stm32f4: make/stm32f4-set-vars, now accepts predefinitions ob sub arch & clock freq
+   stm32f4: support for STM32F427 
+   stm32f4: Pin assignement in HAL constuctor possible (I2C, CAN, UART)
+            -> This can be implemented on other ports too 
+
+   filesystem for stm32f4, discovery board
+   not a bug, only clarify: new parentisis in checksumes.cpp CRC computation
+   added in support lib double drand...
+
+   extentions in matlib (class Rotor & class RPY)
+   extentions in mat: trust and lowpassfilter (signalprocessing.h)
+   BUG in malib.cpp Quaterion(RPY) hatte roll und yaw vertauscht
+   extention in compiler scripts to allow userconfigs
+   I2C_TIMEOUT_IN_NS now userconfig.h-able
+   matlib.h (redundaten kommentaren weg)
+     gedodetic, ecef, eci umsetzungen
+
+
+117:
+   new port: Balckfin (bf561 : adsp-bf561)
+
+   added TopicFilter which may modify msgs before they are distributed
+   added tutorial time tirggered protocoll
+
+   make/linux-set-envs & posix-set-env:
+	    -Wno-cpp (to avoid double warnings from #warning)
+   support-lib/matlib* += Matrix6D
+   timemodell:computeNextBeat returns END_OF_TIME if periode == 0
+   activity.h & .cc from tutorials -> support_lib
+   stem32f4 Def. Stack 1k -> 2k
+
+116:
+    getbit & setBit functions added
+    new function getYieldTimeOverhead
+    stm32f4: pwm & spi update
+    cortexA9: fixed context switching
+    cortexA9: new HAL UART
+    cortexA9: new HAL Shared Memory
+    ppc405: enable/disable interrupts
+
+115.2:
+    fix: Hal_Uart for Biros
+
+115.1:
+    fix: crt.cpp: bss was not fully cleared 
+
+115:
+    support_libs and support_programs moved to seperate rodos-support git repository
+    
+    POSIX & Linux: HAL and LinkInterface shared memory
+    PPC405: support for dlr biros board
+    POSIX & Linux: Disable & Enable Interrupt Functions
+    POSIX: Change internal signal handling(signals are synchronously processed in main thread)
+    stm32f4: HAL Uart now supports up to 8 UARTs
+    POSIX & MakeCOntext: Added HAL Uart
+
+114:
+    new IOEventREceiver and suspendUntil... functions for HAL
+    new port to ARM CoretexA9 (Quadcore iMX6)
+    remove the keyword static in delcaration of global variables (if possible)
+
+
+
+113:
+    STM32F4: STM Standard Peripheral Driver V1.2.1 supporting STM32F429
+    STM32F4: support for STM32F429/439
+
+    can emulation on lilnux
+    rm obsolete tiny-rodos/*
+
+    fifo for multiple readers
+
+    idleCnt added in idleThread
+    name for initiator
+    
+    STM32F4: HAL_ADC
+
+
+112:
+    STM32F4: I2C bug removed & new i2cTest with different sensors
+    
+    
+111: 
+    new tutorial: Shared-stack-activiy
+    hal updates, & SPI
+    supportlib/log updated
+    rodosgui += poligon
+    new src/baremetal/linux-makecontext (no assembler, portable to other CPUS on linux)
+    matlib mit const
+    timemodel extended with "modified julian date" for satellite orbit computations
+    rodos/doc : clean up
+
+
+110:
+	new gateway
+	global HAL
+	rapsbary-pi updated
+    network message now allways big endian
+        
+
+103: 
+    new port: rapsbery-pi
+    Last backup bevor intergrration
+      mit Eriks new gateway, HAL, SVN
+    beginning using stdint in all apis
+    new Gateway, Pre-Version
+
+
+102
+    updated ppc for xilinx
+    beginning changing "long long" -> "int64_t" etc etc
+	first: support_libs/filesystem
+    strncpy: add 0 at the end of the destination
+    filesyytem for linux, posix and rapsberypi
+
+
+101a
+    new: xlinx ppc405 : src/barmetal/ppc405_xcv4*
+    STM32F4 FPU support
+	stm32f4: corrected missing time event propagation
+	on-windows: Corrected udp
+
+    added hardware (cpu) watchdog to all architectures
+    
+100k
+	string_pico* : allwasy in name space aber extern "C" damit: KEIN namespace!
+	bug string-pico: return value was not as defined in string.h
+	on_freertos updated (better but still not good!)
+
+
+100j
+	struct hostent* -> hostent*
+	wegen reference to ‘hostent’ is ambiguous in RODOS::.. und im system
+
+100:	********** namspace RODOS  ***********
+
+
+
+97:
+	SupportProgrammas += Server 3D UIG: OpenGL
+	SupportLibs += Interface zu 3D OpenGL Server
+
+
+96:
+	putter simplified and now puterGeneric includes topicID
+	gateway optimized: Do not sent entire buffers, only ocupied data
+
+
+95:
+	thrad cleared: no msgs reseivcer any more in Thread
+	tutorials cleared (removed obsolete code)
+	tutorails/middleware now uses mask
+
+	rodos gui server in java
+
+	
+
+94:
+    STM32F4 support added (Cortex-M4) (no HW-FPU support yet)
+    solved compile problems due to changes in hw_udp of arm,cortex,stm32,avr
+
+    gui: serverr-java-freedrawing added
+
+    sparc64 & Qemu added
+
+    bug corrected: Timer events now called from timerinterrupthandler
+
+93:
+	separation gui from rodos
+	gui now as clint server application.
+		server independent from rodos
+		client in rodos, comm per upd
+		rm gui_starter
+
+	timer interrupts starts after MAIN()
+	leon port: enable clases & correct timer interrupt
+
+	basic_componentes named in support_libs (better name)
+
+	code which is not really relevant for rodos 
+	but is a nice help (for space projects) is now in support_libs
+
+	new: pritnfVerbosity & PRINTF_CONDITIONAL 
+
+
+92d:
+   gateway simplified, and.. now 100 times faster for udp ping!
+      now using async upd reads: udp interrupts  per middleware
+
+92c:
+   optimasation for yield: do not make a context swithch to the same thread
+   affected files: src/bare-metal-genetric:  Thread_on_hw.cpp and scheduler.cpp
+      see Thread::yield() and Scheduler::schedule()
+
+
+92b:
+   new tutorail/middleware_ping/ (communication times)
+   MAIN has now attribute weak
+   main.cpp: now first set timerInterval and then init timer
+
+92a:
+ New, added: async inputs per middleware for incomig messages from
+   udp
+   terminal io (stdin)
+  see examples in tutorials
+       udp/udpread_async.cpp
+       core/gets_async.cpp
+
+  topic::publishFromInterupt has now as parameter length
+              -> putter:putFromInterrupt auch
+        -> thread hach uach putFromInterutp
+
+  tutorials for subscribers: in many was a putter superflowus: Simplified
+
+  modification in leon:
+       linkerscrit
+
+92:
+    Bug in class Thread fixed: stack pointer was set wrong
+    string_pico.h updated to support c and c++ files
+
+    AVR32: fixed some problems with memory allocation -> syscalls
+    AVR32: own startup code added -> problems in constructor call fixed
+    AVR32: HAL_PWM, HAL_ADC added
+    AVR32: HAL examples/tests added
+
+
+
+
+91b:    added: support_programs/maskgenerator
+             example in monitor-distributed
+
+91a:   basic_components restructured
+	   new: matlib (Tutorials in work!!)
+	   new: io-and-interrupts-hal.
+	   now gui tutorials in basic_components/rodosgui
+           
+
+
+90c:
+    all */*/hw_udp.h to be conform with windows (see isInitialized())
+
+90b:
+	AVR32: added prefix "HAL_" to all hal classes
+	AVR32: implemented uart-class for gateway (not tested)
+
+
+90a:
+	linux and posix udp now implementes broadcast 
+		(use a negativ prot number to send to send broadcast)
+
+
+
+89b:
+	freeertos compile scripts to execute rodos ond freertos on linux
+	make/freertos-lib, freertos-executable
+
+	Scripts: COMPONETS -> COMPONENTS
+	new tutorail: monitor_distributed/graphic_monitor_simple
+
+
+
+89:
+	Atmel AVR 32UC3A0512 support
+        yprintf (PRINTF) now implements %f
+		warning %3.9f means 3 postions then . then 9 posittions
+		macro SPLIT_SEC_NS not used any more
+
+
+88:
+	updated src/on-windows
+	Baremetal-generish: Semaphore Bug Corrected
+	new: hostinfos.h (architecture, basis os, cpu-speed)
+	baremetal_generic: thread::findNextTHreadToRun() 
+		now finds too: Whenn whall be reschedule agian:
+		optimize timer interrupt
+
+    baremetal/leon: new structure for len2 & leon3
+
+
+87:
+	cortex stm32: HW Dependet componetes extended with some IO Devices
+
+	new tutorial:
+		fault tolerance demo
+
+	extended to be able to call Guis. (gui_starter())
+	new: tutorails/qt
+		Designer
+		widgets
+
+  new basiccomponents:
+    rodosgui.h gui/rodosgui-qt-cpp
+
+	support-programs/network*
+		udp reads blocking, instaed of usleep(10000) in the loop
+
+
+86:
+
+   class Event removed.
+    interrupts (Events) will be now distributed using topics & subscribers
+    topic & subscriber extended with publishFromInterrupt and putFromInterrupt
+    ... TimeEvent remains
+
+
+	subscriber: now can be instantiated withtout putter, 
+           Its own (virtual) put will be called
+
+	on-windows added
+		requimred modifications:
+			rodos.h includes hw_predefines.h & hw_postdefines.h
+
+
+
+
+85:
+	ARMv4 architecture fixed for LPC2468
+		Interrupt system working (interrupt handlers can now be normal C functions)
+		Uart drivers for all four UARTs
+	New parameter for the put() and putGeneric() functions to identifiy the originating LinkInterface
+	More than one Gateway usable at the same time
+	
+	some types castings to avoid warningn from other compilers than g++ (on Windows)
+	added gps time to timemodell (for ONS for AF)
+
+84:
+	new hardware dependen layers & Ports
+		stm32 (contrex)
+		virtex-4 ppc on xilinx-posix (make/obc*)
+	some updates to cortex implementation
+
+	bug in yprintf (overflow for %lu) corrected
+
+
+83:
+	intermediate with stm32
+
+82:
+	nue: sortedList
+
+81:
+	tutorials updates from SISTEC
+	comments & Updates from SISTEC 
+
+80a:
+	new funcion getNumberOfArrivedMessagesFromNetwork
+	
+
+79L:
+	tutorial reprotf addes:
+		like printf but instead of printing send monitoring messages
+
+79:
+	printf from dietlib  eliminated
+		now: micro printfsubset in yprintf.h & yprintf.cpp
+
+
+78:
+	new file systemstructure for src bare-metal
+	adding stm32, until now only multisensorbaord standalone
+
+77b
+	new tutorial: middleware-collector 
+		the oposite from pubish! but works
+
+77a
+	optimierungen in topic und subscribers
+
+76c
+	erweiterung der Compiler scripts, damit die applikationene
+	ihre eigenen include und link paths angeben können
+
+76b
+	unifikation von mulstiseor compiler tool chain
+	und arm-v4 toolschain
+	offen noch: cortex 
+76a
+	rename for concistency with gnu-compiler tool chain
+		src/on-hardware -> src/bare-metal
+
+
+75
+	introduction of  basic_components & rodos_services lib
+		gateway from api to basic compoenents
+		all IO interfaces to basic_compoenents/rodos_services
+			different for each CHIP and Development board
+
+	delete confusing shortcuts, for example DECLARE_TOPIC and INSTANTIATE_TOPIC
+
+	monitoringMsg added to normal RODOS api (from tutorial monitoring)
+		topics may send subsets of a message (for example or monitoring) 
+
+	semaphore prevetns priority inversion
+
+
+74
+	SISTEC vorschlaege
+		UPD
+		für Cywin
+		einige Kommentare
+		
+73
+	Split implementation of thread in
+		platform dependet (thread_on_xxx.cpp)
+		and platform independent (thread.cpp)
+
+	Wegen Konflikte in einigen Platform:
+		random umbenannt in randomTT800
+
+72
+	middleware optiemirtung
+		jeder topic hat seine eigene liste von suscribers
+	
+	
+71
+	added src/tiny* for very small microprocessors which do not support multythreading
+	added tutorials/tiny-examples
+
+
+70e
+	Cortex Bugs Korrigiert: 
+		flasche Reihenfolge der Interruptsinitialisierung -> war max 2 threads
+
+70d
+	scripte for cortex integrated
+	schduler updated to match requirements from cortex
+
+
+70b in work
+	hw_upd in posix & linux extended with new arm-cortex functions
+
+70
+	first cortex version (not tested!!!)
+	modifications in */hw_upd to match the cortex version
+
+69:
+	first ppc-405 version included
+		(not good tested!!!!!!)
+
+
+68e
+ 	tutorial monitoring_distribued erweitert
+	mit graphische ausgaben mit UDP nachrichten
+
+68d
+	new tutorail: monitoring_distributed
+	MAIN in different o file in librodos 
+	(becouse of compatiliby problen wih 
+	gnu __attribute__ ((weak))
+
+
+68
+	on posix
+	new tutorial: taskdistribution
+
+67a
+	first steps towars rodos on posix
+
+	uart.h & uart.cpp (in all impelemntationes)
+		uart.putchar -> uart.writechar
+
+66
+	new: Leon2- support  ************************
+
+
+
+65-gast-c
+	printf now in src/independent/printf
+	makes:
+		C_FLAGS and CPP_FLAGS separated
+
+
+65-gast
+	added long random()
+
+	file structur 
+		src/independent
+		src/on-different-gast-operating-systems
+
+
+65a: 3.9.2010
+	 file structure optimierungen von ABSINT
+	 correction of some tutorials: suspendCallerUntil
+	 for posix porting: new method thread::create() called in main() after constructors
+	 
+
+65: 12.7.2010
+	due to portavility difficulties:
+	Thread:: unification of
+	suspend, waitUntil, waitForSingalFrom,
+	-> static suspendCallerUntil
+
+	scheduler rufst TimeEvents::propagate
+
+	linux/hwtimer:
+		timerinterrupt 
+		getitimer(ITIMER_VIRTUAL) -> getitimer(ITIMER_REAL)
+			SIGVTALRM handler -> SIGALRM
+
+
+
+64: 18.4.2010
+	linkinterfaceuart mit S3P Protokoll encoding
+	documantation updated
+
+
+63: 30.3.2010
+	.cc -> .cpp
+	lib*.a now in libs/arch_...
+	api/params.h -> arch_xxxx/.
+	bug corrected: linkinterfaceuart: min msg len = 3 bytes (davor war es 5)
+
+
+62: 12.1.2010
+	00globalobject.o not in lib, linked as o-file prior to any other
+		due to valgrind warnings
+	context switch: instaead of reestart timer Timer::start() stops
+		in context-save and starts in activate
+	code verschlechtert um den blöde Warning "break strict-aliasing rules"
+		weg zu machen (gateway)
+
+
+
+61: 4.1.2010
+	arch_arm7 first edition
+	rename linux86 -> arch_linux_86
+	added support functions like checksume, crc, class CRC, hash
+	topic::topic generates topic id as hash value of topic name
+
+60:
+	Bug corrcted timeModell::ComputeNextBeat was one cycle to late
+
+59:
+	topic::receiveWaiting(msg) added (in gateways too)
+	
+58:
+	debug.h extended: printBin & printCharsHex
+
+57:
+	copyright added
+	tutorial_uartlinkinterface: bytesex corrected to bigEndian
+	src/linkinterfaceuart: 
+		senderId now 2 byted (hardware dependency)
+		bug corrected: readBuffer -> inputBuffer 
+
+56:
+	updated linkinterfaceuart.cc 
+		now handles messages $...<cr> and STX .... ETX
+		bytesex of topicid inverted, now mostsignificant first = BigEndian = motorola
+
+55:
+	the same like 54
+
+54: 
+	bug in linkinterface uart: too short messages -> Crash
+	total new linkinterfaceuart
+	optimized linkinterfaceudp (topicsubscriberreport now used only by gateway)
+		gateway* linkinterfaceupd::owner deleted
+
+53:
+	linkinterface uart integrated
+
+52: 
+	more/better comments
+	timepoints threadsafe
+
+
+51:
+linkuart added
+
+50: 
+new directory structure
+debug extention: getcNoWait, getsNoWait (with corresponding tutorial)
+gateway for all types of gateway
+new tutorial tutorial_gateway
+gateway for uart ports (in test)
+gatewasUdp redo refactored
+Thread::waitfor (deprecated) deleted
+
+
+
+45: 
+xmalloc: maxlen >= XMALLOC_SIZE -> ERROR
+
+
+44: 20.04.09
+supportPrograms/network_reporter.cc : reports list of attachned nodes as topic 1
+tutorial_midleware_distributed/receiver_reports.cc : prints topic 1: Reports of attachned nodes
+
+
+43: 10.03.09
+added TimeModell::splitTimeECSS
+
+42: 25.2.09
+Class Time -> Class TimeModel
+ENDOFTIME = 0x7FFFFFFFFFFFFFFFLL
+Added: RingBuffer 
+
+
+41: 20.1.09
+ListElement reports an error if created not static
+
+40: 19.1.09
+in all Tutorials: Name of subscribers: "nameNotImportant"
+
+39: 30.12.08
+api: getNodeNummer() -> getNodeNumber()
+
+38: 29.12.2008
+void sp_partition_yield(); added to idle thread:
+Allows another Space/Time partition to work, eg
+another linux process in linux, or another partition
+in an ARIC OS. If standalone then just nop()
+
+37: 29.11.2008
+all nanoseconds -> localTime Units & NOW()
+
+36: 28.11.2008
+Warning and komments added
+
+
+35: 27.11.2008
+TNanoseconds deprecated, use now TTime
+Time::getSeconds removed, use now SECONDS_NOW()
+Time::getNanoseconds deprecated, use now NOW()
+
+
+
+34: 25.11.2008
+newtype TTime
+newmacro SECONDS_NOW()
+
+33: 11.11.2008
+Documentation
+
+32: 07.11.2008
+Idle sets priority to 0 in every loop
+
+31: 06.11.2008
+Default event handler resumes a waiter
+---
+Bug corrected: Timeout for Thread::waitForSignalFrom was absolute time
+-------
+PRINTF instead of PRIORITY_CEILING uses now a semaphore
+
+
+30:	31.10.2008
+variables now -> timeNow, becouse of now()
+--------
+PRIORITY_CEILING Bug corrected:
+	idle with prio 0 -> keeps maxial prio!
+---------
+New Tutorial: ThreadChecker
+	required modification: Thread.cc stacklimit computation
+
+
+29:	30.10.2008
+Remove ExternalEvent. Now there is only Event
+which is ExternalEvent too.
+
+
+28:	30.10.2008
+Tutorial documentation in new look + logos
+
+
+27:	30.10.2008
+Redifine of PRIORITY_CEILING macro to use for(...)
+
+
+26:	30.10.2008
+Elimination of InternalEvent
+
+
+25:	25.9.2008
+First internal distribution
+

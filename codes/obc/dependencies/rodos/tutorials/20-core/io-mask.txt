@@ -1,0 +1,14 @@
+01. ----- first line ------------------------------------------------------
+02.                                                                      --
+03. *** This is an example input mask for maskgen.cpp *****              --
+04.                                                                      --
+05. -----------------------------------------------------------------------
+06.
+07. counter from Thread aa [CNTAA ]         counter from Thread bb [CNTBB ]
+09. 
+10.                   last input line [READ                               ]
+11.
+12. Please write here your next line: [INPUTLINE                          ]
+13.
+14. -----------------------------------------------------------------------
+15. ----- last line -------------------------------------------------------

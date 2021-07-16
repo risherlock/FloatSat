@@ -1,0 +1,13 @@
+First beat in 0.03 seconds, period 0.02 seconds
+in 0.02 seconds beat:   0.100000000
+in 0.02 seconds beat:   0.200000000
+in 0.02 seconds beat:   0.300000000
+in 0.02 seconds beat:   0.400000000
+in 0.02 seconds beat:   0.500000000
+in 0.02 seconds beat:   0.600000000
+in 0.02 seconds beat:   0.700000000
+in 0.02 seconds beat:   0.800000000
+in 0.02 seconds beat:   0.900000000
+in 0.02 seconds beat:   1.000000000
+in 0.02 seconds beat:   1.100000000
+hw_resetAndReboot() -> exit

@@ -1,0 +1,48 @@
+﻿
+
+Generates a function to print all fields in the mask
+BUT...
+
+before you include your generated file you have to
+add defines to say what is each field.
+for example
+#define NOW  getTime()
+#define CNT  myInternalCounter
+
+
+and define what is PRINTMASK
+for example
+#define PRINTMASK  printf
+
+please note, it expected an integer for each field
+and generates in the printf format with the maximal length
+eg %6d
+
+_______________________________________________________________ From
+
+
++---------------------------------+
+| time now [NOW   ] counter [CNT] |
++---------------------------------+
+
+_______________________________________________________________ generates
+
+
+
+nst char* screen[] = {
+"",
+"+---------------------------------+",
+"| time now [      ] counter [   ] |",
+"+---------------------------------+",
+"",
+ 0 };
+
+
+#define CLEAR_MASK "\x1B[2J\x1B[1;1H"
+#define INIT_MASK() PRINTMASK("%s", CLEAR_MASK); for(int i = 0; screen[i] != 0; i++) PRINTMASK("%s\n", screen[i]);
+
+void printMaskContent() {
+    PRINTMASK("\x1B[3;13H%6d", NOW);
+    PRINTMASK("\x1B[3;30H%3d", CNT);
+}
+

@@ -1,0 +1,4 @@
+ This will be done before any thread begins
+ Doing so you do not need to use MAIN
+ This is the initator from applications
+hw_resetAndReboot() -> exit

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\dependencies\\core"
+		},
+		{
+			"path": "..\\..\\dependencies\\rodos"
+		}
+	],
+	"settings": {}
+}

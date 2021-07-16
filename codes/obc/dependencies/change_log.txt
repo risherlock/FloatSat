@@ -1,0 +1,2 @@
+2021/5/28 - hal_pwm.h and hal_pwm.cpp -> Added void setIdx(PWM_IDX idx) and HAL_PWM()
+2021/5/28 - hal_gpio.h and hal_gpio.cpp -> Added void setPinNumber(GPIO_PIN pinIdx) and HAL_GPIO()

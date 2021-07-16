@@ -1,0 +1,5 @@
+remove the semaphore and try again!
+remove the semaphore and try again!
+Hello world, I am here
+Hello world, I am here
+hw_resetAndReboot() -> exit

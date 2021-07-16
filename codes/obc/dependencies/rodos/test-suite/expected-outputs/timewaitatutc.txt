@@ -1,0 +1,3 @@
+Starting and waiting until 1st second
+After 1st second
+hw_resetAndReboot() -> exit

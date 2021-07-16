@@ -1,0 +1,91 @@
+ddd
+ddd before protector 
+------- ddd entered at   0.100000000
+          ddd 1.yield. getScheduleCounter() 1
+          ddd 2.yield. getScheduleCounter() 1
+          ddd 3.yield. getScheduleCounter() 1
+          ddd 4.yield. getScheduleCounter() 1
+-------- ddd leaves getScheduleCounter() 1
+ddd after protector getScheduleCounter()  1 
+ddd
+ddd before protector 
+------- ddd entered at   0.200000000
+          ddd 1.yield. getScheduleCounter() 1
+          ddd 2.yield. getScheduleCounter() 1
+          ddd 3.yield. getScheduleCounter() 1
+          ddd 4.yield. getScheduleCounter() 1
+-------- ddd leaves getScheduleCounter() 1
+ddd after protector getScheduleCounter()  1 
+ddd
+ddd before protector 
+------- ddd entered at   0.300000000
+          ddd 1.yield. getScheduleCounter() 1
+          ddd 2.yield. getScheduleCounter() 1
+          ddd 3.yield. getScheduleCounter() 1
+          ddd 4.yield. getScheduleCounter() 1
+-------- ddd leaves getScheduleCounter() 1
+ddd after protector getScheduleCounter()  1 
+ddd
+ddd before protector 
+------- ddd entered at   0.400000000
+          ddd 1.yield. getScheduleCounter() 1
+          ddd 2.yield. getScheduleCounter() 1
+          ddd 3.yield. getScheduleCounter() 1
+          ddd 4.yield. getScheduleCounter() 1
+-------- ddd leaves getScheduleCounter() 1
+ddd after protector getScheduleCounter()  1 
+ddd
+ddd before protector 
+------- ddd entered at   0.500000000
+          ddd 1.yield. getScheduleCounter() 1
+          ddd 2.yield. getScheduleCounter() 1
+          ddd 3.yield. getScheduleCounter() 1
+          ddd 4.yield. getScheduleCounter() 1
+-------- ddd leaves getScheduleCounter() 1
+ddd after protector getScheduleCounter()  1 
+ddd
+ddd before protector 
+------- ddd entered at   0.600000000
+          ddd 1.yield. getScheduleCounter() 1
+          ddd 2.yield. getScheduleCounter() 1
+          ddd 3.yield. getScheduleCounter() 1
+          ddd 4.yield. getScheduleCounter() 1
+-------- ddd leaves getScheduleCounter() 1
+ddd after protector getScheduleCounter()  1 
+ddd
+ddd before protector 
+------- ddd entered at   0.700000000
+          ddd 1.yield. getScheduleCounter() 1
+          ddd 2.yield. getScheduleCounter() 1
+          ddd 3.yield. getScheduleCounter() 1
+          ddd 4.yield. getScheduleCounter() 1
+-------- ddd leaves getScheduleCounter() 1
+ddd after protector getScheduleCounter()  1 
+ddd
+ddd before protector 
+------- ddd entered at   0.800000000
+          ddd 1.yield. getScheduleCounter() 1
+          ddd 2.yield. getScheduleCounter() 1
+          ddd 3.yield. getScheduleCounter() 1
+          ddd 4.yield. getScheduleCounter() 1
+-------- ddd leaves getScheduleCounter() 1
+ddd after protector getScheduleCounter()  1 
+ddd
+ddd before protector 
+------- ddd entered at   0.900000000
+          ddd 1.yield. getScheduleCounter() 1
+          ddd 2.yield. getScheduleCounter() 1
+          ddd 3.yield. getScheduleCounter() 1
+          ddd 4.yield. getScheduleCounter() 1
+-------- ddd leaves getScheduleCounter() 1
+ddd after protector getScheduleCounter()  1 
+ddd
+ddd before protector 
+------- ddd entered at   1.000000000
+          ddd 1.yield. getScheduleCounter() 1
+          ddd 2.yield. getScheduleCounter() 1
+          ddd 3.yield. getScheduleCounter() 1
+          ddd 4.yield. getScheduleCounter() 1
+-------- ddd leaves getScheduleCounter() 1
+ddd after protector getScheduleCounter()  1 
+hw_resetAndReboot() -> exit

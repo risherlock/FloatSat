@@ -1,0 +1,222 @@
+
+# Comments begin with # any where in the line
+# @ defines the name of the namespace, if not existent, then Common will be used
+#   please note, if more than one are defined, the last one will be used
+
+
+# first define the application for a serie of commands, use @
+
+#Command                                   ShortNm    Serv.Subserv.Parmas                                                                       
+@XXX
+XXX                       XXX         110,0  # the rest of this line is a comment
+XXX_NOP                   XXXNOP      110,1
+XXX_SET_HISTORY_RATE      XXXHIRA     110,2   int8_t  RATE  cycles 
+XXX_SET_PARAM             XXXSETPA    110,3   int8_t  INDEX index     int32_t VALUE undef
+XXX_CLEAR_VARS            XXXCLRV     110,4
+XXX_SEND_EXTENDTELEM      XXXEXTM     110,5
+XXX_WHICH_NEEDS_LONG_TIME XXXLONG     110,6
+
+@TEST
+TST                       TST          17,0
+TST_NOP                   TSTNOP       17,1
+
+@GLOBAL
+GLB                       GLB         120,0
+GLB_NOP                   GLBNOP      120,1
+GLB_SEND_EXTENDED_TM      GLBEXTM     120,2
+
+@COMMON
+CMM                       CMM         121,0
+CMM_NOP                   CMMNOP      121,1
+CMM_SET_VERBOSITY         CMMVERV     121,2   int8_t  VERBOSITY index
+CMM_SET_IN_LEOP           CMMINLE     121,3
+CMM_SET_OUT_OF_LEOP       CMMOUTLE    121,4
+CMM_GOTOSAFEMODE          CMMSAFE     121,5
+CMM_SET_MODE              CMMMODE     121,6   int8_t  MODE index
+
+@COMMANDER
+CMD                       CMD          1,0
+CMD_NOP                   CMDNOPE      1,1
+
+@HOUSEKEEPER
+HKE                       HKE          3,0
+HKE_NOP                   HKENOP       3,1
+HKE_SET_RATE              HKESETRA     3,2    int8_t  RATE cycles
+HKE_START_DOWNLINK        HKEDOWON     3,3
+HKE_STOP_DOWNLINK         HKEDOWOF     3,4
+
+@TIMEDCMDMGR
+TCM                       TCM          18,0
+TCM_NOP                   TCMNOP       18,1
+TCM_CLEAR_TT_LIST         TCMCLRLS     18,2
+TCM_ACTIVATE_PENDING_CMDS TCMACTVC     18,3
+TCM_DELETE_PENDING_CMDS   TCMDELC      18,4
+TCM_SEND_TT_LIST          TCMSNDLS     18,5
+TMC_APPEND_TIME_TIMED_CMD TMCAPPCM     13,6   int32_t SECS seconds     char* TTC_SP sp
+
+
+@ADNOMALYREP
+ANM                       ANM         116,0
+ANM_NOP                   ANMNOP      116,1
+ANM_SEND_REPORT           ANMREPR     116,2
+ANM_SEND_RINGBUFFER       ANMSENRG    116,4
+ANM_CLEAR_ERR_COUNTER     ANMCLRER    116,5
+
+
+
+
+############## ------------------------------------------------ Not implemented 
+
+
+@BOOTMANAGER
+BOM                       BOM         123,0
+BOM_NOP                   BOMNOP      123,1                                                                                 
+BOM_JUMP_TO_BOOTIMAGE     BOMJMP      123,2   int8_t  INDEX index
+BOM_REINIT_BOOT_LIST      BOMREIN     123,3   int8_t  INDEX index    int8_t INDEX2 index      int8_t INDEX3 index
+BOM_APPEND_BOOT_IDYX      BOMAPP      123,4   int8_t  INDEX index
+BOM_SEND_BOOTLIST         BOMSEND     123,5
+BOM_REBOOT                BOMREBO     123,6
+BOM_CHECK_BOOTIMAGE       BOMCHECK    123,7   int8_t  INDEX index
+
+@POWDIST
+POD                       POD         124,0
+POD_NOP                   PODNOP      124,1
+POD_ENABLE_CONTROL        PODON       124,2
+POD_DISABLE_CONTROL       PODUNTOF    124,3
+POD_UNIT_ON               PODUNTON    124,4   int8_t  INDEX index
+POD_UNIT_OFF              PODOFF      124,5   int8_t  INDEX index
+POD_SETCONF_BITMAP        PODBMAP     124,6   int32_t BITMAP1 xx    int32_t BITMAP2 xx   int32_t BITMAP3 xx int32_t BITMAP4 xxx
+POD_SET_RANGE             PODRANG     124,7   int8_t  INDEX   xx    int16_t MIN  xxx     int16_t  MAX xx
+POD_SEND_PWR_SETTINGS     PODSEND     124,8
+
+@THEMRALCNTR
+TER                       TER         125,0
+TER_NOP                   TERNOP      125,1
+TER_ENABLE_CONTROL        TERON       125,2
+TER_DISABLE_CONTROL       TEROFF      125,3
+TER_HEATER_ON             TERHEA1     125,4   int8_t  INDEX index
+TER_HEATER_OFF            TERHEA0     125,5   int8_t  INDEX index
+TER_HEATPIPE_CNTRL        TERHEAP     125,6   int8_t  HP_CONDU1  xx int8_t     HP_CONDU2 xx
+TER_SET_RANGE             TERRANG     125,7   int8_t  INDEX      xx int16_t    MIN   xx      int16_t    MAX xx
+
+@REDUNDANZMNG
+RED                       RED         126,0
+RED_NOP                   REDNOP      126,1
+RED_SEND_DUL_TO_OTHERNODE REDSDULS    126,2   int32_t LEN bytes
+RED_ACCEPT_DUL_OTHERNODE  REDSDULA    126,3   int32_t LEN bytes
+RED_RESET_PINPOG_CNT      REDRSTP     126,4
+RED_TOGGLE_WORKER_MONITOR REDTOG      126,5
+RED_ENALBE_RECOVER_OTHER  RECREC1     126,6
+RED_DISABLE_RECOVER_OTHER REDREC0     126,7
+
+@WATCHDOG
+WAT                       WAT         107,0
+WAT_NOP                   WATNOP      107,1
+WAT_RESET_NODE            WATRSTND    107,2
+WAT_NOT_ALLOW_RESET       WATDISBL    107,3
+WAT_ALLOW_RESET           WATENABL    107,4
+
+@TIMECONTROL
+TIM                       TIM          9,0
+TIM_NOP                   TIMNOPE      9,1
+TIM_SET_UTC               TIMSETUT     9,2    int32_t SECS seconds       int32_t MILLIS milliseconds
+TIM_SET_LEAP              TIMLEAP      9,3    int32_t SECS seconds                                                              
+TIM_SET_UTC_DELTA         TIMDELT      9,4    int32_t SECS seconds       int32_t MILLIS milliseconds
+TIM_ENABLE_DISTR_UTC      MENDIS     9,5
+TIM_DISABLE_DISTR_UTC     TIMDISDI     9,6
+TIM_ENABLE_1PPS_SYNC      TIM1PPS1     9,7
+TIM_DISABLE_1PPS_SYNC     TIM1PPS0     9,8
+TIM_SET_CLOCK_DRIFT       TIMDRIF      9,9
+TIM_SEND_TIMEMODEL        TIMSENDM     9,10
+
+
+
+@DOWNLINKMNG
+DWL                       DWL         111,0
+DWL_NOP                   DWLNOP      111,1
+DWL_SET_LOW_RATE          DWLLOW      111,2
+DWL_SET_HI_RATE           DWLHI       111,3
+DWL_START_SBAND           DWLSB1      111,4
+DWL_STOP_SBAND            DWLSB0      111,5
+DWL_START_XBAND           DWLXB1      111,6
+DWL_STOP_XBAND            DWLXB0      111,7
+DWL_CONFIG_SBAND          DWLSBCON    111,8   int32_t UNKNOWN xx
+DWL_CONFIG_XBAND          DWLXBCON    111,9   int32_t UNKNOWN xx
+DWL_CONFIG_SBAND_RED      DWLSRED     111,10  int32_t UNKNOWN xx
+DWL_CONFIG_XBAND_RED      DWLXRED     111,11  int32_t UNKNOWN xx
+
+
+@SAFEMODELIST
+SFL                       SFL         114,0
+SFL_NOP                   SFLNOP      114,1
+SFL_GOTOSAFEMODE          SFLSAFEM    114,2
+SFL_SET_MODE              SFLSETMO    114,3   int8_t  NEW_MODE index
+SFL_SEND_SFLIST           SFLSNDLS    114,4
+SFL_UPLOADLST             SFLUPLLS    114,5
+SFL_NEXT_START_IN_LEOP    SFLINLEO    114,6
+SFL_OUT_OF_LEOP           SFLOUTLE    114,7
+SFL_REQUEST_STARTLIST     SFLREQLS    114,8
+
+@DATAUPLOAD
+DUL                       DUL          14,0
+DUL_NOP                   DULNOP       14,1
+DUL_RESET_DUL_PROTOCOL    DULRSTPR     14,2
+DUL_DISTRIBUTE_DATA       DULDISTR     14,3
+DUL_WRITE_SEGMENT         DULWRITE     14,4   int8_t  INDEX index
+DUL_UPLOADBLOCK           DULUPBLK     14,5   int16_t ENTRY_NR index  int16_t BLK_LEN bytes   int32_t BLK_CR crc
+DUL_CHECK_UPLOAD_SEG      DULCKSEG     14,6   int32_t LEN  bytes      int32_t EXPT_CRC crc
+
+
+@SURVEILLANCE
+SUR                       SUR         117,0
+SUR_NOP                   SURNOP      117,1
+SUR_SET_RANGES            SURRANG     117,2   int8_t  INDEX index      int16_t MIN advalue      int16_t MAX advalue
+SUR_ENABLE_THREAD_CHECK   SURTHR1     117,3
+SUR_DISABLE_THREAD_CHECK  SURTHR0     117,4
+SUR_ENABLE_MEM_CHECK      SURMEM1     117,5
+SUR_DISABLE_MEM_CHECK     SURMEM0     117,6
+SUR_SEND_ANALOGVALS       SURSENDA    117,7
+SUR_ENABLE_LATCHUPPROT    SURLATC1    117,8
+SUR_DISABLE_LATCHUPPROT   SURLATC0    117,9
+
+@ROVERCNTR
+ROV                       ROV         118,0
+ROV_NOP                   ROVNOP      118,1
+ROV_SEND_EXTENDED_TM      ROVEXTM     118,2
+ROV_START_ANT_SCAN        ROVSCNB     118,3
+ROV_STOP_ANT_SCAN         ROVSCNS     118,4
+ROV_SET_ANT_POS           ROVSTAPO    118,5   int32_t ANT_ANGLE degrees
+ROV_STOP                  ROVSTOP     118,6
+ROV_CNTR_WHEEL            ROVWHEE     118,7   int8_t INDEX index   int16_t ANGLE degree   int16_t SPEED m/s
+ROV_DRIVE                 ROVDRIVE    118,8   int16_t X_SPEED m/s  int16_t Y_SPEED m/s    int16_t ROT_SPEED deg/se   int16_t TIMOUT ms
+
+
+@ATTITUDECNTR
+ATC                       ATC         119,0
+ATC_NOP                   ATCNOP      119,1
+ATC_SET_ATC_MODE          ATCMOD      119,2   int8_t  ATC_MODE index
+ATC_GOTO_ATC_SAFEMODE     ATCSAFE     119,3
+ATC_GOTO_ATC_SUSPENMODE   ATCSUSP     119,4
+
+@GUINDANCE
+GUI                       GUI         121,0
+GUI_NOP                   GUINOP      121,1
+
+@NAVIGATION
+NAV                       NAV         120,0
+NAV_NOP                   NAVNOP      120,1
+
+@LANDERCONTROL
+LND                       LND         122,0
+LND_NOP                   LNDNOP      122,1
+
+@PAYLOADCNTR
+PAY                       PAY         123,0
+PAY_NOP                   PAYNOP      123,1
+
+
+#just to define the mamepsace of all
+@Common
+
+
+

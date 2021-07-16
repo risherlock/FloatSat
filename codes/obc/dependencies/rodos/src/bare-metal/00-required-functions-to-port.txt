@@ -1,0 +1,68 @@
+
+Required include files
+----------------------
+
+    hw_udp.h
+    hw_tcp.h
+    platform-parameter.h
+
+
+Required function
+------------------
+
+    RODOS::enterSleepMode()
+    RODOS::FFLUSH()
+
+    RODOS::getHostBasisOS()
+    RODOS::getHostCpuArch()
+    RODOS::getIsHostBigEndian()
+    RODOS::getMaxIdleCntPerSecond()
+    RODOS::getSpeedKiloLoopsPerSecond()
+    RODOS::getYieldTimeOverhead()
+
+Pleas note:
+    to compute the values of 
+       RODOS::getMaxIdleCntPerSecond()
+       RODOS::getSpeedKiloLoopsPerSecond()
+       RODOS::getYieldTimeOverhead()
+    use tutorials/20-core/compute-hostinfos.cpp
+
+
+    RODOS::hwGetNanoseconds()
+    RODOS::hwInit()
+    RODOS::hwInitTime()
+
+    RODOS::Timer::init()
+    RODOS::Timer::microsecondsInterval
+    RODOS::Timer::setInterval(long long)
+    RODOS::Timer::start()
+    RODOS::Timer::stop()
+
+    __asmSaveContextAndCallScheduler
+    __asmSwitchToContext
+
+    RODOS::hwInitContext(long*, void*)
+    RODOS::sp_partition_yield()
+    RODOS::startIdleThread()
+
+If you use the c-lib, you shall implement minimalistic
+-------------------------------------------------------
+    _close
+    __cxa_pure_virtual
+    __dso_handle
+    _fstat
+    _isatty
+    _lseek
+    _read
+    _sbrk
+    _write
+
+For your onw startup  you will need
+------------------------------------
+    call_constructors.c
+
+Miscs
+-----
+    linker script
+
+

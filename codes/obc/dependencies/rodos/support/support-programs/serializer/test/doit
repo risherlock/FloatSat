@@ -1,0 +1,23 @@
+\rm -rf generated
+mkdir generated
+\rm -f a.out
+
+
+echo
+echo
+
+echo "generating serializers for user defined classes"
+
+for  i in *.hh
+do 
+    FILE="${i%%.*}"
+    echo "    $i -> generated/$FILE"
+    ../generator/serializer --use-non-pod $i > generated/${FILE}.cpp
+done
+
+echo "compiling user application and generated files"
+
+linux-executable  -I include -I. testapplication.cpp generated/*
+
+echo
+echo

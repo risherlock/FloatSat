@@ -1,0 +1,17 @@
+Waiting until 0.01 seconds after start
+After 0.01 seconds
+Waiting until 0.015 seconds have passed
+0.025 second has passed
+Print every 0.02 seconds, start at 0.04 seconds
+Current time:   0.100000000
+Current time:   0.200000000
+Current time:   0.300000000
+Current time:   0.400000000
+Current time:   0.500000000
+Current time:   0.600000000
+Current time:   0.700000000
+Current time:   0.800000000
+Current time:   0.900000000
+Current time:   1.000000000
+Current time:   1.100000000
+hw_resetAndReboot() -> exit

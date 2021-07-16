@@ -1,0 +1,6 @@
+
+POSIX-warning: no more than one core. please call 
+    "sudo taskset -c 0 tst"
+
+
+

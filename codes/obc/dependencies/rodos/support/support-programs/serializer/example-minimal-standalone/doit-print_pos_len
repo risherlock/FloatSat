@@ -1,0 +1,23 @@
+\rm -rf generated
+mkdir generated
+\rm -f a.out
+
+
+echo
+echo
+
+echo "__________________ printing position and leng of fields in serialized buffer"
+
+for  i in *.hh
+do 
+    FILE="${i%%.*}"
+    # echo "    $i -> generated/$FILE"
+    ../generator/print_serialized_pos_len --use-non-pod $i >  temp1.cpp
+    g++ temp1.cpp
+    a.out
+    \rm a.out temp1.cpp
+done
+
+
+echo
+echo

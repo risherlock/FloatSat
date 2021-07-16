@@ -1,0 +1,20 @@
+\rm -rf generated
+mkdir generated
+\rm -f a.out
+
+
+echo
+echo
+
+echo "generating serializers for user defined classes"
+
+for  i in *.hh
+do 
+    FILE="${i%%.*}"
+    echo "    $i -> generated/$FILE.cpp"
+    serializer --use-non-pod $i > generated/${FILE}.cpp
+done
+
+
+echo
+echo

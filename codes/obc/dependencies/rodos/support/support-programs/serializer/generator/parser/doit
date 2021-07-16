@@ -1,0 +1,17 @@
+
+
+CXXFLAGS=" `llvm-config --cxxflags`"
+CXXFLAGS+=" -std=c++11 -Wall -pedantic -Isrc/ -MMD -MP -fexceptions"
+LDFLAGS="`llvm-config --ldflags`"
+LDFLAGS+=" -lclang"
+
+
+echo "_____________________ parser to generate serializer/deserializer code"
+g++  -Isrc $CXXFLAGS -o serializer  \
+     src/parser.cc src/filter.cc src/serializer.cc \
+     $LDFLAGS
+
+echo "_____________________ parser to print pos and len of serialized bufffers"
+g++  -Isrc $CXXFLAGS -o print_serialized_pos_len \
+     src/parser.cc src/filter.cc src/print_serialized_pos_len.cc \
+     $LDFLAGS

@@ -1,0 +1,21 @@
+Please type string of characters. Run at least 0.04 seconds
+I call getsnowait -> topic deactivated! 
+
+
+********* String: 'string1' **********
+I call getsnowait -> topic deactivated! 
+I call getsnowait -> topic deactivated! 
+
+
+********* String: 'string2' **********
+I call getsnowait -> topic deactivated! 
+I call getsnowait -> topic deactivated! 
+
+
+********* String: 'string3' **********
+I call getsnowait -> topic deactivated! 
+I call getsnowait -> topic deactivated! 
+I call getsnowait -> topic deactivated! 
+I call getsnowait -> topic deactivated! 
+I call getsnowait -> topic deactivated! 
+-------------------------------------------------------------hw_resetAndReboot() -> exit

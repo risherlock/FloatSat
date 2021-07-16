@@ -1,0 +1,11 @@
+Timenow =  0
+Timenow =  0
+Timenow =  0
+Timenow =  0
+Timenow =  0
+Timenow =  0
+Timenow =  0
+Timenow =  0
+Timenow =  0
+Timenow =  1
+hw_resetAndReboot() -> exit

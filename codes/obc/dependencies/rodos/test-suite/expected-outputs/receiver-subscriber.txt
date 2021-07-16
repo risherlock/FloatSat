@@ -1,0 +1,23 @@
+Publisher01 sending Counter1 1
+SimpleSub - Length: 4 Data: 1 TopicId: 11555 
+Publisher01 sending Counter1 2
+SimpleSub - Length: 4 Data: 2 TopicId: 11555 
+Publisher01 sending Counter1 3
+SimpleSub - Length: 4 Data: 3 TopicId: 11555 
+Publisher01 sending Counter1 4
+SimpleSub - Length: 4 Data: 4 TopicId: 11555 
+Publisher01 sending Counter1 5
+SimpleSub - Length: 4 Data: 5 TopicId: 11555 
+Publisher01 sending Counter1 6
+SimpleSub - Length: 4 Data: 6 TopicId: 11555 
+Publisher01 sending Counter1 7
+SimpleSub - Length: 4 Data: 7 TopicId: 11555 
+Publisher01 sending Counter1 8
+SimpleSub - Length: 4 Data: 8 TopicId: 11555 
+Publisher01 sending Counter1 9
+SimpleSub - Length: 4 Data: 9 TopicId: 11555 
+Publisher01 sending Counter1 10
+SimpleSub - Length: 4 Data: 10 TopicId: 11555 
+Publisher01 sending Counter1 11
+SimpleSub - Length: 4 Data: 11 TopicId: 11555 
+hw_resetAndReboot() -> exit

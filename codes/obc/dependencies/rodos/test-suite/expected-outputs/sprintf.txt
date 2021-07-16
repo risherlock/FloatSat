@@ -1,0 +1,4 @@
+ prints from string: 
+  = 'str = 10 20'
+-- DONE--
+hw_resetAndReboot() -> exit

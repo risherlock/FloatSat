@@ -1,0 +1,24 @@
+activateAt(NOW() + 12*MILLISECONDS) now=  0.100000000
+Activating Time Event at   0.200000000, reactivation in 0.02 seconds
+Periodic Time Event at   0.300000000
+SINGLE Time Event at   0.400000000
+Activating Time Event at   0.500000000, reactivation in 0.02 seconds
+Periodic Time Event at   0.600000000
+Activating Time Event at   0.700000000, reactivation in 0.02 seconds
+Periodic Time Event at   0.800000000
+Activating Time Event at   0.900000000, reactivation in 0.02 seconds
+Periodic Time Event at   1.000000000
+Activating Time Event at   1.100000000, reactivation in 0.02 seconds
+Periodic Time Event at   1.199999999
+Activating Time Event at   1.300000000, reactivation in 0.02 seconds
+Periodic Time Event at   1.399999999
+Activating Time Event at   1.500000000, reactivation in 0.02 seconds
+Periodic Time Event at   1.600000000
+Activating Time Event at   1.700000000, reactivation in 0.02 seconds
+Periodic Time Event at   1.800000000
+Activating Time Event at   1.900000000, reactivation in 0.02 seconds
+Periodic Time Event at   2.000000000
+Activating Time Event at   2.100000000, reactivation in 0.02 seconds
+Periodic Time Event at   2.200000000
+Terminating
+hw_resetAndReboot() -> exit

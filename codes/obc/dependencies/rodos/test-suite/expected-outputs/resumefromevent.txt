@@ -1,0 +1,41 @@
+Suspend and wait until some one resumes me
+   Time Event at   0.100000000
+   Testwaiter resumed from me
+testwaiter running again at   0.200000000
+Suspend and wait until some one resumes me
+   Time Event at   0.300000000
+   Testwaiter resumed from me
+testwaiter running again at   0.400000000
+Suspend and wait until some one resumes me
+   Time Event at   0.500000000
+   Testwaiter resumed from me
+testwaiter running again at   0.600000000
+Suspend and wait until some one resumes me
+   Time Event at   0.700000000
+   Testwaiter resumed from me
+testwaiter running again at   0.800000000
+Suspend and wait until some one resumes me
+   Time Event at   0.900000000
+   Testwaiter resumed from me
+testwaiter running again at   1.000000000
+Suspend and wait until some one resumes me
+   Time Event at   1.100000000
+   Testwaiter resumed from me
+testwaiter running again at   1.199999999
+Suspend and wait until some one resumes me
+   Time Event at   1.300000000
+   Testwaiter resumed from me
+testwaiter running again at   1.399999999
+Suspend and wait until some one resumes me
+   Time Event at   1.500000000
+   Testwaiter resumed from me
+testwaiter running again at   1.600000000
+Suspend and wait until some one resumes me
+   Time Event at   1.700000000
+   Testwaiter resumed from me
+testwaiter running again at   1.800000000
+Suspend and wait until some one resumes me
+   Time Event at   1.900000000
+   Testwaiter resumed from me
+testwaiter running again at   2.000000000
+hw_resetAndReboot() -> exit
