@@ -1,0 +1,5 @@
+Inside rodos directory: 
+1. mkdir build
+2. cd build
+3. cmake -G"MinGW Makefiles" -DCMAKE_TOOLCHAIN_FILE=../rodos/cmake/port/discovery.cmake -S ../ -B .
+4. make
