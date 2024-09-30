@@ -2,6 +2,14 @@
 
 Software templates for *FloatSat Praktikum* at *Julius-Maximilians-Universität Würzburg*.
 
+## Table of contents
+
+1. [Dependencies](#1-dependencies)
+2. [Usage](#2-usage)
+3. [Examples](#3-examples)
+4. [Caution!](#4-caution)
+    - [Virtual COM port configuration](#virtual-com-port-configuration)
+
 ## 1. Dependencies
 
 1. GNU Arm Embedded Toolchain: ```gcc-arm-none-eabi```
@@ -31,11 +39,11 @@ Each example is a RODOS thread provided to help you get started with RODOS and s
 3. [hello_world.cpp](hello_world.cpp) - Continuously prints ```Hello World!\n```  via UART port.
 4. [hello_topic.cpp](hello_topic.cpp) - Inter-thread communication between two threads using a topic. Transmitter thread publishes the topic with increment of values every 5 seconds and the receiver thread subscribes to the topic once a second.
 
-## 3. Caution !
+## 4. Caution!
 
 ### Virtual COM port configuration
 
-In the Disovery boards provided in the lab, virtual COM ports has been enabled. This allows us to use print messages using UART protocol via STLINK USB port using UART protocol onboard the STM32. PD8 and PD9 (UART3) pins are connected to the STLINK for the virtual COM.
+In the Disovery boards provided in the lab, virtual COM ports has been enabled. This allows us to print messages using UART protocol via STLINK USB port onboard the STM32. PD8 and PD9 (UART3) pins are connected to the STLINK for the virtual COM.
 
 However, RODOS configures UART2 by default. Therefore we should configure the appropriate UART port by uncommenting the corresponding ```UART_DEBUG``` in ```platform-parameter.h``` for the target device.
 
