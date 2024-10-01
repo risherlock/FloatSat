@@ -7,6 +7,8 @@ Software templates for *FloatSat Praktikum* at *Julius-Maximilians-Universität 
 1. [Dependencies](#1-dependencies)
 2. [Usage](#2-usage)
 3. [Examples](#3-examples)
+	- [STM32 RODOS examples](#stm32-rodos-examples)
+	- [Python middleware for RODOS](#python-middleware-for-rodos)
 4. [Caution!](#4-caution)
     - [Virtual COM port configuration](#virtual-com-port-configuration)
 	- [Links not working](#links-not-working)
