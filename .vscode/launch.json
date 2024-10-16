@@ -13,8 +13,8 @@
       "cwd": "${workspaceFolder}",
       "device": "STM32F407VG",
       "interface": "swd",
-      "executable": "./build/main.elf",
-      "gdbPath": "/usr/bin/gdb-multiarch",
+      "executable": "${workspaceFolder}/build/main.elf",
+      "runToEntryPoint": "main",
     }
   ]
 }
