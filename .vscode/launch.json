@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Cortex Debug (OpenOCD)",
+      "type": "cortex-debug",
+      "request": "launch",
+      "servertype": "openocd",
+      "configFiles": [
+        "interface/stlink.cfg",
+        "target/stm32f4x.cfg"
+      ],
+      "cwd": "${workspaceFolder}",
+      "device": "STM32F407VG",
+      "interface": "swd",
+      "executable": "./build/main.elf",
+      "gdbPath": "/usr/bin/gdb-multiarch",
+    }
+  ]
+}
