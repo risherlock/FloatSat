@@ -15,6 +15,7 @@
       "interface": "swd",
       "executable": "${workspaceFolder}/build/main.elf",
       "runToEntryPoint": "main",
+      "linux": {"gdbPath": "/usr/bin/gdb-multiarch"}
     }
   ]
 }
