@@ -21,8 +21,9 @@ We need following tools/software for embedded software development for FloatSat.
 
 1. A tool with command terminal to write the C++ software  like VSCode.
 2. GNU Arm Embedded Toolchain for cross-compilation.
-3. A software for flash & debug like OpenOCD.
-4. Serial terminal for virtual port like Arduino IDE (serial terminal), Hterm, PuTTY etc..
+3. Make and CMake to automate compile and flash process.
+4. A software for flash & debug like OpenOCD.
+5. Serial terminal for virtual port like Arduino IDE (serial terminal), Hterm, PuTTY etc..
 
 Following sections guides you through the installation of these dependencies on your computer for [Linux](#linux) and [Windows](#windows).
 
@@ -35,20 +36,25 @@ Followings are the commands to install above mentioned softwares. Before any of 
 3. OpenOCD: ```sudo apt-get install openocd```
 4. HTerm: https://www.der-hammer.info/pages/terminal.html
 
-**Note:** Make sure that the installation was successful simply by checking version using the commands ```arm-none-eabi-gcc --version``` and ```openocd --version```.
-
 ### Windows
 
 Following are the links to Windows installer for the different dependencies.
 
-1. VS Code: https://www.vscode.com
-2. GNU Toolchain: https://developer.arm.com/downloads/-/gnu-rm
-3. OpenOCD: https://gnutoolchains.com/arm-eabi/openocd/
-4. HTerm: https://www.der-hammer.info/pages/terminal.html
+1. VS Code: https://code.visualstudio.com/docs/?dv=win64user
+2. GNU Toolchain [win32.exe]: https://developer.arm.com/downloads/-/gnu-rm
+3. Make installer: https://gnuwin32.sourceforge.net/downlinks/make.php
+4. CMake [Windows x64 Installer] : https://cmake.org/download/
+5. OpenOCD: https://gnutoolchains.com/arm-eabi/openocd/
+6. HTerm: https://www.der-hammer.info/pages/terminal.html
 
-**Note:** Please add ```bin``` directory of both GNU Toolchain and OpenOCD to the global PATH environment variable.
+**Note:** For Windows, please add ```bin``` directory of both GNU Toolchain and OpenOCD to the global PATH environment variable.
 
-**Note:** Make sure that the installation was successful simply by checking version using the commands ```arm-none-eabi-gcc --version``` and ```openocd --version```.
+**Note:** For both Linux and Windods, make sure that the installation in successful simply by checking the version of software in command prompt.
+
+1. Make: ```make --version```
+2. CMake: ```cmake --version```
+3. Toolchain: ```arm-none-eabi-gcc --version```
+4. OpenOCD: ```openocd --version```
 
 ## Hello blinky
 
@@ -63,7 +69,7 @@ Now that everything is setup, we are ready to flash our first software; ```hello
 7. Compile and flash example with command: ```make flash main=hello_blinky.cpp```
 8. Enjoy the serenity of blinking LEDs!
 
-[Here]() is a video demonstrating the example.
+[Here](https://youtu.be/kRnWll_0JtY) is a video demonstrating the example.
 
 ## Basic RODOS examples
 
@@ -75,7 +81,7 @@ Official RODOS repository contains a whole bunch of examples which can be found 
 
 **Note:** ```PRINTF``` will not work if you do not do [this](#virtual-com-port-configuration).
 
-[Here]() is a video demonstrating the ```hello_blinky.cpp``` and ```hello_world.cpp```.
+[Here](https://youtu.be/kRnWll_0JtY) is a video demonstrating the ```hello_blinky.cpp``` and ```hello_world.cpp```.
 
 ## How to setup a new project?
 
@@ -159,7 +165,7 @@ There are various links in this README that directs to files and folders inside 
 
 ## Contact
 
-If you find any issue with the content in this repository or wish some topic requires more clarification, please feel free to either make a GitHub issue or send a pull request. For any other queries feel free to reach [me](risherlock221b@gmail.com).
+If you find any issue with the content of this repository or wish to make it better, please feel free to either make a GitHub issue or send a pull request. If you need help or for any other queries, feel free to reach me at risherlock221b@gmail.com.
 
 <p style="text-align: center">
   Happy coding!
