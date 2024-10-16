@@ -89,7 +89,7 @@ HEX = $(CP) -O ihex
 BIN = $(CP) -O binary -S
 
 ASFLAGS = $(MCU) $(AS_DEFS) $(ASM_INCLUDES) $(OPTIMIZE) -Wall -fdata-sections -ffunction-sections
-CFLAGS = $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPTIMIZE) -Wall -fdata-sections -ffunction-sections
+CFLAGS = $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPTIMIZE) -Wall -fdata-sections -ffunction-sections -fdebug-prefix-map="$(PWD)"=.
 
 ifeq ($(DEBUG), 1)
 	CFLAGS += -g -gdwarf-2
