@@ -80,6 +80,7 @@ Official RODOS repository contains a whole bunch of examples which can be found 
 1. [hello_blinky.cpp](hello_blinky.cpp) - Flashes four LEDs onboard the Discovery board.
 3. [hello_world.cpp](hello_world.cpp) - Continuously prints ```Hello World!\n```  via UART port.
 4. [hello_topic.cpp](hello_topic.cpp) - Inter-thread communication between two threads using a topic. Transmitter thread publishes the topic with increment of values every 5 seconds and the receiver thread subscribes to the topic once a second.
+5. [hello_debug](hello_debug.cpp) - Computes the Fibonacci sequence but does not print any output. The goal is to track the values of the variables using onboard STLINK debugger with OpenOCD.
 
 **Note:** ```PRINTF``` will not work if you do not do [this](#virtual-com-port-configuration).
 
@@ -153,7 +154,7 @@ Figure: Setup to test communication with Python middleware. The middleware commu
 
 ### Virtual COM port configuration
 
-In the Disovery boards provided in the lab, virtual COM ports has been enabled. This allows us to print messages using UART protocol via STLINK USB port onboard the STM32. PD8 and PD9 (UART3) pins are connected to the STLINK for the virtual COM.
+In the Discovery boards provided in the lab, virtual COM ports have been enabled by connecting PD8 and PD9 (UART3) to the STLINK. You may notice a pair of fine enameled wires on your board or in the figure above. The virtual COM port allows us to print messages using the UART protocol via the STLINK USB port onboard the STM32, without the need for any USB-TTL modules.
 
 However, RODOS configures UART2 by default. Therefore we should configure the appropriate UART port by uncommenting the corresponding ```UART_DEBUG``` in ```platform-parameter.h``` for the target device. For Discovery board, [this](rodos/src/bare-metal/stm32f4/platform-parameter/discovery/platform-parameter.h) is the file.
 
