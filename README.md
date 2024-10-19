@@ -2,12 +2,14 @@
 
 Software templates for *FloatSat Praktikum* at *Julius-Maximilians-Universität Würzburg*.
 
+The purpose of these instructions is to help you get started with RODOS on both Windows and Linux for FloatSat. This work is carried out at the *FloatSat lab* under the supervision of Atheel Redah and Muhammad Faisal.
+
 ## Table of contents
 
 1. [Setting up for STM32 programming.](#setting-up-for-stm32-programming)
     - [Linux](#linux)
     - [Windows](#windows)
-1. [Hello blinky](#hello-blinky)
+1. [First project: Hello blinky](#first-project-hello-blinky)
 1. [Basic RODOS examples](#basic-rodos-examples)
 1. [How to setup a new project?](#how-to-setup-a-new-project)
 1. [Debugging](#debugging)
@@ -29,9 +31,9 @@ Following sections guides you through the installation of these dependencies on 
 
 ### Linux
 
-Followings are the commands to install above mentioned softwares. Before any of that, please make sure to update your system with the command ```sudo apt upgrade```.
+Followings are the commands to install above mentioned softwares. Before any of that, please make sure to update your system with the command ```sudo apt upgrade``` and ```sudo apt update```.
 
-1. VS Code: ```sudo apt install code```
+1. VS Code: ```sudo snap install code```
 2. GNU Toolchain: ```sudo apt-get install gcc-arm-none-eabi gdb-multiarch```
 3. OpenOCD: ```sudo apt-get install openocd```
 4. HTerm: https://www.der-hammer.info/pages/terminal.html
@@ -49,14 +51,14 @@ Following are the links to Windows installer for the different dependencies.
 
 **Note:** For Windows, please add ```bin``` directory of both GNU Toolchain and OpenOCD to the global PATH environment variable.
 
-**Note:** For both Linux and Windods, make sure that the installation in successful simply by checking the version of software in command prompt.
+**Note:** For both Linux and Windows, make sure that the installation in successful simply by checking the version of software in command prompt.
 
 1. Make: ```make --version```
 2. CMake: ```cmake --version```
 3. Toolchain: ```arm-none-eabi-gcc --version```
 4. OpenOCD: ```openocd --version```
 
-## Hello blinky
+## First project: Hello blinky
 
 Now that everything is setup, we are ready to flash our first software; ```hello_blinky.cpp```. Please follow following steps.
 
@@ -85,9 +87,9 @@ Official RODOS repository contains a whole bunch of examples which can be found 
 
 ## How to setup a new project?
 
-Allow me to make a deduction, if I may? I know what you are thinking right now: *So far, these instructions only showed us how to run a single example file. What if I have to add different header/.cpp files? How do I create a project with my own folder structures?*
+Allow me to make a deduction, if I may? I know what you are thinking right now: *so far, these instructions have only shown us how to run a single example file. What if I need to add different header and .cpp files? How do I create a project with my own folder structure?*
 
-I am glad you asked it. Here is a solution with following imaginary folder system.
+I’m glad you asked! Here is a solution using the following imaginary folder structure.
 
 ```
 |.
@@ -132,6 +134,8 @@ We will be using an extension called [Cortex Debug](https://github.com/Marus/cor
 
 Go to the ```Extensions``` on the vertical bar at the left hand side of the VSCode and search for ```Cortex-Debug``` by [marus25](https://github.com/Marus). Flash the software and press ```F5``` to start debugging.
 
+Please watch this [video](https://youtu.be/FC7BE-yrDFg) for the demonstration of debugging.
+
 ### Python middleware for ground station
 
 RODOS has [Python middleware ](rodos/support/support-programs/middleware-python) that allows communication between Python on computer and RODOS on STM32 using gateways such as UART (using bluetooth module) or UDP (using WiFi module). [This pdf](rodos/support/support-programs/middleware-python/readme.pdf) has instruction on how to install the middleware. There are some [examples](rodos/support/support-programs/middleware-python/examples/) on the RODOS repository, but again, we have included software to get started. It should be a good starting point to develop ground station.
@@ -165,8 +169,12 @@ There are various links in this README that directs to files and folders inside 
 
 ## Contact
 
-If you find any issue with the content of this repository or wish to make it better, please feel free to either make a GitHub issue or send a pull request. If you need help or for any other queries, feel free to reach me at risherlock221b@gmail.com.
+If you find any issues with the content of this repository (such as dead hyperlinks) or would like to make improvements, please feel free to either create a GitHub issue or submit a pull request. I highly encourage you to reach out if you need any assistance or guidance on RODOS, or for any other questions related to firmware development for FloatSat. My email is metrictensor221b@gmail.com.
 
-<p style="text-align: center">
+<div align="right">
+  - Rishav
+</div>
+
+<div align="center">
   Happy coding!
-</p>
+</div>
