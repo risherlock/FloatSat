@@ -36,7 +36,7 @@ Followings are the commands to install above mentioned softwares. Before any of 
 
 1. **VS Code:** ```sudo snap install code```
 2. **GNU Toolchain:** ```sudo apt-get install gcc-arm-none-eabi gdb-multiarch```
-3. **OpenOCD:** It is to be noted that the  command ```sudo apt-get install openocd``` <span style="color:red; font-weight:bold">does not</span> install the latest version of the OpenOCD and might create problem with flash and debug. Therefore, it is advisable that you compile and install the OpenOCD from its official repository using following commands:
+3. **OpenOCD:** It is to be noted that the  command ```sudo apt-get install openocd``` *does not* install the latest version of the OpenOCD and might create problem with flash and debug. Therefore, it is advisable that you compile and install the OpenOCD from its official repository using following commands:
 ```
 git clone https://github.com/openocd-org/openocd.git
 cd openocd
@@ -147,6 +147,8 @@ We will be using an extension called [Cortex Debug](https://github.com/Marus/cor
 Go to the ```Extensions``` on the vertical bar at the left hand side of the VSCode and search for ```Cortex-Debug``` by [marus25](https://github.com/Marus). Flash the software and press ```F5``` to start debugging.
 
 Please watch this [video](https://youtu.be/FC7BE-yrDFg) for the demonstration of debugging.
+
+**Note:** If you have changed the directory of your project, please make sure to run ```make rodos``` to recompile RODOS before debugging. The debug symbols generated during compilation often include absolute or relative paths to the source files. If the paths do not match where the files are located at runtime, the debugger may fail to find the corresponding source code, which can prevent you from setting breakpoints or viewing variable values.
 
 ### Python middleware for ground station
 
