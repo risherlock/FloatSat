@@ -25,7 +25,8 @@ We need following tools/software for embedded software development for FloatSat.
 2. GNU Arm Embedded Toolchain for cross-compilation.
 3. Make and CMake to automate compile and flash process.
 4. A software for flash & debug like OpenOCD.
-5. Serial terminal for virtual port like Arduino IDE (serial terminal), Hterm, PuTTY etc..
+5. Serial terminal for virtual port like Arduino IDE (serial terminal), Hterm, PuTTY etc.
+6. Git for automatic clone and installation of [RODOS](https://gitlab.com/rodos) by [Makefile](Makefile).
 
 Following sections guides you through the installation of these dependencies on your computer for [Linux](#linux) and [Windows](#windows).
 
@@ -35,7 +36,15 @@ Followings are the commands to install above mentioned softwares. Before any of 
 
 1. VS Code: ```sudo snap install code```
 2. GNU Toolchain: ```sudo apt-get install gcc-arm-none-eabi gdb-multiarch```
-3. OpenOCD: ```sudo apt-get install openocd```
+3. OpenOCD:
+```
+git clone https://github.com/openocd-org/openocd.git
+cd openocd
+./bootstrap
+./configure
+make
+sudo make install
+```
 4. HTerm: https://www.der-hammer.info/pages/terminal.html
 
 ### Windows
@@ -48,8 +57,7 @@ Following are the links to Windows installer for the different dependencies.
 4. CMake [Windows x64 Installer] : https://cmake.org/download/
 5. OpenOCD: https://gnutoolchains.com/arm-eabi/openocd/
 6. HTerm: https://www.der-hammer.info/pages/terminal.html
-
-**Note:** For Windows, please add ```bin``` directory of both GNU Toolchain and OpenOCD to the global PATH environment variable.
+7. Git: https://git-scm.com/downloads/win
 
 **Note:** For both Linux and Windows, make sure that the installation in successful simply by checking the version of software in command prompt.
 
@@ -57,6 +65,9 @@ Following are the links to Windows installer for the different dependencies.
 2. CMake: ```cmake --version```
 3. Toolchain: ```arm-none-eabi-gcc --version```
 4. OpenOCD: ```openocd --version```
+5. Git: ```git --version```
+
+**Note:** For Windows, if the installation is successful but the version check fails, please add the software's ```bin``` directory to the global PATH environment variable. For example: ```C:\Program Files\GnuWin32\bin``` for ```make```.
 
 ## First project: Hello blinky
 
