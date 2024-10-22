@@ -25,7 +25,8 @@ We need following tools/software for embedded software development for FloatSat.
 2. GNU Arm Embedded Toolchain for cross-compilation.
 3. Make and CMake to automate compile and flash process.
 4. A software for flash & debug like OpenOCD.
-5. Serial terminal for virtual port like Arduino IDE (serial terminal), Hterm, PuTTY etc..
+5. Serial terminal for virtual port like Arduino IDE (serial terminal), Hterm, PuTTY etc.
+6. Git for automatic clone and installation of [RODOS](https://gitlab.com/rodos) by [Makefile](Makefile).
 
 Following sections guides you through the installation of these dependencies on your computer for [Linux](#linux) and [Windows](#windows).
 
@@ -33,23 +34,30 @@ Following sections guides you through the installation of these dependencies on 
 
 Followings are the commands to install above mentioned softwares. Before any of that, please make sure to update your system with the command ```sudo apt upgrade``` and ```sudo apt update```.
 
-1. VS Code: ```sudo snap install code```
-2. GNU Toolchain: ```sudo apt-get install gcc-arm-none-eabi gdb-multiarch```
-3. OpenOCD: ```sudo apt-get install openocd```
-4. HTerm: https://www.der-hammer.info/pages/terminal.html
+1. **VS Code:** ```sudo snap install code```
+2. **GNU Toolchain:** ```sudo apt-get install gcc-arm-none-eabi gdb-multiarch```
+3. **OpenOCD:** It is to be noted that the  command ```sudo apt-get install openocd``` <span style="color:red; font-weight:bold">does not</span> install the latest version of the OpenOCD and might create problem with flash and debug. Therefore, it is advisable that you compile and install the OpenOCD from its official repository using following commands:
+```
+git clone https://github.com/openocd-org/openocd.git
+cd openocd
+./bootstrap
+./configure
+make
+sudo make install
+```
+4. **HTerm:** https://www.der-hammer.info/pages/terminal.html
 
 ### Windows
 
 Following are the links to Windows installer for the different dependencies.
 
-1. VS Code: https://code.visualstudio.com/docs/?dv=win64user
-2. GNU Toolchain [win32.exe]: https://developer.arm.com/downloads/-/gnu-rm
-3. Make installer: https://gnuwin32.sourceforge.net/downlinks/make.php
-4. CMake [Windows x64 Installer] : https://cmake.org/download/
-5. OpenOCD: https://gnutoolchains.com/arm-eabi/openocd/
-6. HTerm: https://www.der-hammer.info/pages/terminal.html
-
-**Note:** For Windows, please add ```bin``` directory of both GNU Toolchain and OpenOCD to the global PATH environment variable.
+1. **VS Code:** https://code.visualstudio.com/docs/?dv=win64user
+2. **GNU Toolchain [win32.exe]:** https://developer.arm.com/downloads/-/gnu-rm
+3. **Make installer:** https://gnuwin32.sourceforge.net/downlinks/make.php
+4. **CMake [Windows x64 Installer]:** https://cmake.org/download/
+5. **OpenOCD:** https://gnutoolchains.com/arm-eabi/openocd/
+6. **HTerm:** https://www.der-hammer.info/pages/terminal.html
+7. **Git:** https://git-scm.com/downloads/win
 
 **Note:** For both Linux and Windows, make sure that the installation in successful simply by checking the version of software in command prompt.
 
@@ -57,6 +65,9 @@ Following are the links to Windows installer for the different dependencies.
 2. CMake: ```cmake --version```
 3. Toolchain: ```arm-none-eabi-gcc --version```
 4. OpenOCD: ```openocd --version```
+5. Git: ```git --version```
+
+**Note:** For Windows, if the installation is successful but the version check fails, please add the software's ```bin``` directory to the global PATH environment variable. For example: ```C:\Program Files\GnuWin32\bin``` for ```make```.
 
 ## First project: Hello blinky
 
@@ -170,7 +181,7 @@ There are various links in this README that directs to files and folders inside 
 
 ## Contact
 
-If you find any issues with the content of this repository (such as dead hyperlinks) or would like to make improvements, please feel free to either create a GitHub issue or submit a pull request. I highly encourage you to reach out if you need any assistance or guidance on RODOS, or for any other questions related to firmware development for FloatSat. My email is metrictensor221b@gmail.com.
+If you find any issues with the content of this repository (such as confusing instructions or dead hyperlinks) or would like to make improvements, please feel free to either create a GitHub issue or submit a pull request. I highly encourage you to reach out if you need any assistance or guidance on RODOS, or for any other questions related to firmware development for FloatSat. My email is [metrictensor221b@gmail.com](mailto:metrictensor221b@gmail.com).
 
 <div align="right">
   - Rishav
