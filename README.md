@@ -106,6 +106,7 @@ Official RODOS repository contains a whole bunch of examples which can be found 
 3. [hello_world.cpp](hello_world.cpp) - Continuously prints ```Hello World!\n```  via UART port.
 4. [hello_topic.cpp](hello_topic.cpp) - Inter-thread communication between two threads using a topic. Transmitter thread publishes the topic with increment of values every 5 seconds and the receiver thread subscribes to the topic once a second.
 5. [hello_debug](hello_debug.cpp) - Computes the Fibonacci sequence but does not print any output. The goal is to track the values of the variables using onboard STLINK debugger with OpenOCD.
+6. [hello_encoder](hello_encoder.cpp) - Encoder interface using STM32F4's encoder mode on pins PA0 and PA1.
 
 **Note:** ```PRINTF``` will not work if you do not do [this](#virtual-com-port-configuration).
 

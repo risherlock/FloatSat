@@ -46,6 +46,7 @@ C_INCLUDES =  \
 # C/C++ defines
 C_DEFS =  \
 -DUSE_STM32_DISCOVERY \
+-DSTM32F40_41xxx \
 -DUART_DEBUG_IDX
 
 # Asemply source files
