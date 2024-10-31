@@ -11,6 +11,11 @@ TARGET = main
 # Build path
 BUILD_DIR = build
 
+# Path to openocde for Linux
+RULE_FILE = 60-openocd.rules
+RULE_PATH = assets/$(RULE_FILE)
+RULE_DEST = /etc/udev/rules.d/$(RULE_FILE)
+
 # Will you debug?
 DEBUG = 1
 
@@ -156,6 +161,12 @@ rodos: clean
 	rm rodos/build/* || true
 	cmake -Srodos -Brodos/build -DCMAKE_TOOLCHAIN_FILE=cmake/port/discovery.cmake
 	make -C rodos/build
+
+udev:
+	sudo cp $(RULE_PATH) $(RULE_DEST)
+	sudo chmod 644 $(RULE_DEST)
+	sudo udevadm control --reload
+	sudo udevadm trigger
 endif
 
 # Windows

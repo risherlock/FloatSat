@@ -14,6 +14,8 @@ The purpose of these instructions is to help you get started with RODOS on both 
 1. [How to setup a new project?](#how-to-setup-a-new-project)
 1. [Debugging](#debugging)
 1. [Python middleware for ground station](#python-middleware-for-ground-station)
+    - [Examples](#examples)
+    - [Connecting to the Bluetooth module](#connecting-to-the-bluetooth-module)
 1. [Caution!](#caution)
 1. [Contact](#contact)
 
@@ -37,6 +39,7 @@ Followings are the commands to install above mentioned softwares. Before any of 
 1. **VS Code:** ```sudo snap install code```
 2. **GNU Toolchain:** ```sudo apt-get install gcc-arm-none-eabi gdb-multiarch```
 3. **OpenOCD:** It is to be noted that the  command ```sudo apt-get install openocd``` *does not* install the latest version of the OpenOCD and might create problem with flash and debug. Therefore, it is advisable that you compile and install the OpenOCD from its official repository using following commands:
+
 ```
 git clone https://github.com/openocd-org/openocd.git
 cd openocd
@@ -46,6 +49,8 @@ make
 sudo make install
 ```
 4. **HTerm:** https://www.der-hammer.info/pages/terminal.html
+
+**Note:** Please run the command ```make udev``` in the terminal from the root directory of this repository to grant the necessary access rights to OpenOCD for debugging and flashing. Doing this installs the rule from [udev rule file](assets/60-openocd.rules), sets permissions, and reloads udev.
 
 ### Windows
 
@@ -58,6 +63,8 @@ Following are the links to Windows installer for the different dependencies.
 5. **OpenOCD:** https://gnutoolchains.com/arm-eabi/openocd/
 6. **HTerm:** https://www.der-hammer.info/pages/terminal.html
 7. **Git:** https://git-scm.com/downloads/win
+8. **MinGW:** MinGW: https://sourceforge.net/projects/mingw/
+
 
 **Note:** For both Linux and Windows, make sure that the installation in successful simply by checking the version of software in command prompt.
 
@@ -66,8 +73,15 @@ Following are the links to Windows installer for the different dependencies.
 3. Toolchain: ```arm-none-eabi-gcc --version```
 4. OpenOCD: ```openocd --version```
 5. Git: ```git --version```
+6. MinGW: ```g++ --version```
 
-**Note:** For Windows, if the installation is successful but the version check fails, please add the software's ```bin``` directory to the global PATH environment variable. For example: ```C:\Program Files\GnuWin32\bin``` for ```make```.
+**Note:** For Windows, if the installation is successful but the version check fails, please add the software's ```bin``` directory to the global PATH environment variable. For example: ```C:\Program Files\GnuWin32\bin``` for ```make```. To do this:
+
+1. Press Windows key and search ```Edit the system environment variables```.
+2. Select ```Environment Variables```.
+3. Under ```System variables```, locate the ```PATH``` variable and edit it.
+4. Paste the path of the bin directory in the ```Variable value``` field.
+5. After adding the path, restart your terminal. The version check should then work.
 
 ## First project: Hello blinky
 
@@ -150,18 +164,37 @@ Please watch this [video](https://youtu.be/FC7BE-yrDFg) for the demonstration of
 
 **Note:** If you have changed the directory of your project, please make sure to run ```make rodos``` to recompile RODOS before debugging. The debug symbols generated during compilation often include absolute or relative paths to the source files. If the paths do not match where the files are located at runtime, the debugger may fail to find the corresponding source code, which can prevent you from setting breakpoints or viewing variable values.
 
-### Python middleware for ground station
+## Python middleware for ground station
 
-RODOS has [Python middleware ](rodos/support/support-programs/middleware-python) that allows communication between Python on computer and RODOS on STM32 using gateways such as UART (using bluetooth module) or UDP (using WiFi module). [This pdf](rodos/support/support-programs/middleware-python/readme.pdf) has instruction on how to install the middleware. There are some [examples](rodos/support/support-programs/middleware-python/examples/) on the RODOS repository, but again, we have included software to get started. It should be a good starting point to develop ground station.
+RODOS has [Python middleware ](rodos/support/support-programs/middleware-python) that allows communication between Python on computer and RODOS on STM32 using gateways such as UART (using bluetooth module) or UDP (using WiFi module). There are some [examples](rodos/support/support-programs/middleware-python/examples/) on the RODOS repository, but again, we have included software to get started. It should be a good starting point to develop ground station.
+
+### Examples
 
 1. [hello_python.cpp](hello_python.cpp) - Publishes data using RODOS topic via UART gateway (with bluetooth module) to Python. It also receives three axis sensor data from Python middleware and prints it on virtual COM port.
 2. [python_rxtx.py](python_rxtx.py) - Receives topic published by RODOS and transmits the data by packing it into ```struct``` that is understood by RODOS.
 
 <p align="center">
-  <img src="docs/20241001_174229.jpg" width="350">
+  <img src="assets/20241001_174229.jpg" width="350">
 </p>
 
 Figure: Setup to test communication with Python middleware. The middleware communicates with RODOS using bluetooth module connected to ```UART_IDX2``` (Tx: PD5 and Rx: PD6).
+
+### Connecting to the Bluetooth module
+
+In-order to connect to the Bluetooth module, turn on Bluetooth of your computer and find the module and pair to it using default pin ```1234```. Once the connection is established, LED onboard the module stops flashing and lits continuously. If your computer does not have Bluetooth or it does not work, please use the dongle provided by the lab.
+
+On Windows, once Bluetooth is connected, you will be able to view the Bluetooth module as a COM port in the Device Manager, indicating that the connection is ready. Things aren’t as smooth on Linux, but you can follow the steps below.
+
+1. Turn on the Bluetooth of your computer.
+2. Find and pair to the module using default pin.
+3. Click on the name of Bluetooth module and observe the device address.
+
+<p align="center">
+  <img src="assets/20241031_053237.png" width="250">
+</p>
+
+4. Connect to the module using the command ```sudo rfcomm connect /dev/rfcomm0 00:0E:EA:CF:6E:55 1 &```
+5. Now you should be able to access the Bluetooth module using the port ```/dev/rfcomm0```.
 
 ## Caution!
 
